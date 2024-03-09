@@ -3,6 +3,7 @@ import { Box, Container, Divider } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import Education from './Education';
 import MoreAboutMe from './MoreAboutMe';
+import OtherAspects from './OtherAspects';
 
 export default function Home() {
   const isMobile = useMediaQuery('(max-width: 62em)');
@@ -13,6 +14,8 @@ export default function Home() {
       <MoreAboutMe />
       <Divider mt="xl" />
       <Education />
+      <Divider mt="xl" />
+      <OtherAspects />
     </>
   );
 

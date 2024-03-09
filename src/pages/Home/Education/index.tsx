@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   Text,
   Title,
+  Transition,
   rem,
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
@@ -41,23 +42,34 @@ export default function Education() {
             h={!isMobile ? PRIMARY_COL_HEIGHT : SECONDARY_COL_HEIGHT}
             style={{ position: 'relative' }}
           >
-            {overlayAnHS && (
-              <Overlay radius="md" onMouseLeave={() => !isMobile && setOverlayAnHS(false)}>
-                <Flex direction="column" align="center" justify="center" h="100%">
-                  <img
-                    src="images/components/antelope-high-school-logo.png"
-                    alt="Antelope High School"
-                    style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
-                  />
-                  <Title order={3} c="white" ta="center">
-                    Antelope High School
-                  </Title>
-                  <Text size="sm" c="white" ta="center">
-                    Nov 2022 - expected Jun 2026
-                  </Text>
-                </Flex>
-              </Overlay>
-            )}
+            <Transition
+              mounted={overlayAnHS}
+              transition="fade"
+              duration={200}
+              timingFunction="ease"
+            >
+              {(styles) => (
+                <Overlay
+                  radius="md"
+                  onMouseLeave={() => !isMobile && setOverlayAnHS(false)}
+                  style={styles}
+                >
+                  <Flex direction="column" align="center" justify="center" h="100%">
+                    <img
+                      src="images/components/antelope-high-school-logo.png"
+                      alt="Antelope High School"
+                      style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
+                    />
+                    <Title order={3} c="white" ta="center">
+                      Antelope High School
+                    </Title>
+                    <Text size="sm" c="white" ta="center">
+                      Nov 2022 - expected Jun 2026
+                    </Text>
+                  </Flex>
+                </Overlay>
+              )}
+            </Transition>
             <BackgroundImage
               p="md"
               h="100%"
@@ -77,23 +89,34 @@ export default function Education() {
             </Grid.Col>
             <Grid.Col span={isMobile ? 12 : 6}>
               <Box h={SECONDARY_COL_HEIGHT} style={{ position: 'relative' }}>
-                {overlayTQT1 && (
-                  <Overlay radius="md" onMouseLeave={() => !isMobile && setOverlayTQT1(false)}>
-                    <Flex direction="column" align="center" justify="center" h="100%">
-                      <img
-                        src="images/components/tqt1-secondary-school-logo.png"
-                        alt="Tran Quoc Toan 1 Secondary School"
-                        style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
-                      />
-                      <Title order={3} c="white" ta="center">
-                        Tran Quoc Toan 1 Secondary School
-                      </Title>
-                      <Text size="sm" c="white" ta="center">
-                        Sep 2021 - Oct 2022
-                      </Text>
-                    </Flex>
-                  </Overlay>
-                )}
+                <Transition
+                  mounted={overlayTQT1}
+                  transition="fade"
+                  duration={200}
+                  timingFunction="ease"
+                >
+                  {(styles) => (
+                    <Overlay
+                      radius="md"
+                      onMouseLeave={() => !isMobile && setOverlayTQT1(false)}
+                      style={styles}
+                    >
+                      <Flex direction="column" align="center" justify="center" h="100%">
+                        <img
+                          src="images/components/tqt1-secondary-school-logo.png"
+                          alt="Tran Quoc Toan 1 Secondary School"
+                          style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
+                        />
+                        <Title order={3} c="white" ta="center">
+                          Tran Quoc Toan 1 Secondary School
+                        </Title>
+                        <Text size="sm" c="white" ta="center">
+                          Sep 2021 - Oct 2022
+                        </Text>
+                      </Flex>
+                    </Overlay>
+                  )}
+                </Transition>
                 <BackgroundImage
                   p="md"
                   h="100%"
@@ -105,23 +128,34 @@ export default function Education() {
             </Grid.Col>
             <Grid.Col span={isMobile ? 12 : 6}>
               <Box h={SECONDARY_COL_HEIGHT} style={{ position: 'relative' }}>
-                {overlayAIS && (
-                  <Overlay radius="md" onMouseLeave={() => !isMobile && setOverlayAIS(false)}>
-                    <Flex direction="column" align="center" justify="center" h="100%">
-                      <img
-                        src="images/components/the-asian-international-school-logo.png"
-                        alt="The Asian International School"
-                        style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
-                      />
-                      <Title order={3} c="white" ta="center">
-                        The Asian International School
-                      </Title>
-                      <Text size="sm" c="white" ta="center">
-                        Aug 2014 - May 2021
-                      </Text>
-                    </Flex>
-                  </Overlay>
-                )}
+                <Transition
+                  mounted={overlayAIS}
+                  transition="fade"
+                  duration={200}
+                  timingFunction="ease"
+                >
+                  {(styles) => (
+                    <Overlay
+                      radius="md"
+                      onMouseLeave={() => !isMobile && setOverlayAIS(false)}
+                      style={styles}
+                    >
+                      <Flex direction="column" align="center" justify="center" h="100%">
+                        <img
+                          src="images/components/the-asian-international-school-logo.png"
+                          alt="The Asian International School"
+                          style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
+                        />
+                        <Title order={3} c="white" ta="center">
+                          The Asian International School
+                        </Title>
+                        <Text size="sm" c="white" ta="center">
+                          Aug 2014 - May 2021
+                        </Text>
+                      </Flex>
+                    </Overlay>
+                  )}
+                </Transition>
                 <BackgroundImage
                   p="md"
                   h="100%"
