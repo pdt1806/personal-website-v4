@@ -36,7 +36,12 @@ export default function Education() {
       <Center>
         <Title order={1}>Education</Title>
       </Center>
-      <Box my="md" mt="xl">
+      <Box
+        style={{
+          marginTop: 'calc(var(--mantine-spacing-lg) * 2)',
+          marginBottom: 'calc(var(--mantine-spacing-lg) * 2)',
+        }}
+      >
         <SimpleGrid cols={{ base: 1, xl: 2 }} spacing="md">
           <Box
             h={!isMobile ? PRIMARY_COL_HEIGHT : SECONDARY_COL_HEIGHT}

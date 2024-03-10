@@ -1,10 +1,24 @@
 import { Box, Burger, Button, Divider, Drawer, Group, ScrollArea, Title, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-
+import { Link } from 'react-router-dom';
 import classes from './index.module.css';
 
 export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+
+  const links = (
+    <>
+      <Link to="/" className={classes.link} onClick={closeDrawer}>
+        Home
+      </Link>
+      <Link to="/skills" className={classes.link} onClick={closeDrawer}>
+        Skills
+      </Link>
+      <Link to="/works" className={classes.link} onClick={closeDrawer}>
+        Works
+      </Link>
+    </>
+  );
 
   return (
     <Box>
@@ -21,20 +35,13 @@ export function Header() {
             <Title order={4}>Benny Nguyen</Title>
           </Group>
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
-              About me
-            </a>
-            <a href="#" className={classes.link}>
-              Skills
-            </a>
-            <a href="#" className={classes.link}>
-              Works
-            </a>
+            {links}
           </Group>
           <Group visibleFrom="sm">
-            <Button>Contact</Button>
+            <Button component={Link} to="/contact" onClick={closeDrawer}>
+              Contact me
+            </Button>
           </Group>
-
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
@@ -49,20 +56,14 @@ export function Header() {
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-          <a href="#" className={classes.link}>
-            About me
-          </a>
-          <a href="#" className={classes.link}>
-            Skills
-          </a>
-          <a href="#" className={classes.link}>
-            Works
-          </a>
+          {links}
 
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <Button>Contact me</Button>
+            <Button component={Link} to="/contact" onClick={closeDrawer}>
+              Contact me
+            </Button>
           </Group>
         </ScrollArea>
       </Drawer>
