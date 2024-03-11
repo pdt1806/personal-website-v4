@@ -6,19 +6,19 @@ const mockdata = [
   {
     title: 'Willing to Learn',
     description:
-      'Learning is a never-ending process. I’m always willing to learn new things and improve my skills.',
+      'Learning is a never-ending process. I am always willing to learn new things and improve my skills.',
     icon: IconBook,
   },
   {
     title: 'Language Advantage',
     description:
-      'Being fluent in English and Vietnamese is a huge advantage for me to communicate with people from different countries. I also know a little bit of Japanese and Spanish.',
+      'Being fluent in English and Vietnamese is a big advantage for me to communicate with people from different countries. I also have some knowledge of Japanese and Spanish.',
     icon: IconLanguage,
   },
   {
     title: 'Teamwork Skills',
     description:
-      'I have experience working in a team and I know how to communicate and collaborate with other members to achieve the best results.',
+      'I have experience working in a team, and I know how to communicate and collaborate with other members to achieve the best results.',
     icon: IconUsersGroup,
   },
 ];
@@ -48,7 +48,8 @@ export function Values() {
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        Besides my knowledge in programming, I also have some skills and values that I'm proud of.
+        In addition to my programming knowledge, there are certain skills and values that I take
+        pride in.
       </Text>
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>

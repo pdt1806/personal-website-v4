@@ -4,7 +4,7 @@ import { Box, Center, Title } from '@mantine/core';
 const info = [
   {
     title: 'Soccer',
-    desc: "I enjoy watching and playing soccer since the age of 10. With my passion, I had been a part of my 2 middle schools' soccer team for 2 years.",
+    desc: "I enjoy watching and playing soccer since the age of 10. With my passion, I have been a part of my 2 middle schools' soccer team for 2 years.",
   },
   {
     title: 'Choir',
@@ -24,7 +24,7 @@ export default function OtherAspects() {
       </Center>
       <Box my="md" mt="xl">
         {info.map((_, index) => (
-          <OtherAspectsCard info={info[index]} index={index} />
+          <OtherAspectsCard info={info[index]} index={index} key={index} />
         ))}
       </Box>
     </Box>

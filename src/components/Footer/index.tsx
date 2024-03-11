@@ -1,10 +1,5 @@
-import { ActionIcon, Container, Group, Text, Title, rem } from '@mantine/core';
-import {
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandX,
-} from '@tabler/icons-react';
+import { Container, Group, Text, rem } from '@mantine/core';
+import SocialLinks from '../SocialLinks';
 import classes from './index.module.css';
 
 export default function Footer() {
@@ -14,13 +9,15 @@ export default function Footer() {
         <div className={classes.logo}>
           <Group mb="sm">
             <img
-              src="icons/webIcon.png"
+              src="icons/webIcon.svg"
               alt="Logo"
               width={35}
               height={35}
               style={{ pointerEvents: 'none' }}
             />
-            <Title order={4}>Benny Nguyen</Title>
+            <Text fz="lg" fw="bold">
+              Benny Nguyen
+            </Text>
           </Group>
           <Text size="xs" c="dimmed" className={classes.description}>
             A{' '}
@@ -61,18 +58,13 @@ export default function Footer() {
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandGithub style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandFacebook style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandX style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
+          <SocialLinks
+            color="gray"
+            size="lg"
+            page="footer"
+            variant="subtle"
+            style={{ width: rem(18), height: rem(18) }}
+          />
         </Group>
       </Container>
     </footer>

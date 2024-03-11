@@ -26,7 +26,7 @@ export function Header() {
         <Group justify="space-between" h="100%">
           <Group>
             <img
-              src="icons/webIcon.png"
+              src="icons/webIcon.svg"
               alt="Logo"
               width={35}
               height={35}
@@ -42,7 +42,12 @@ export function Header() {
               Contact me
             </Button>
           </Group>
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger
+            opened={drawerOpened}
+            onClick={toggleDrawer}
+            hiddenFrom="sm"
+            aria-label="burger-button"
+          />
         </Group>
       </header>
 

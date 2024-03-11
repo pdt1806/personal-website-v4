@@ -16,7 +16,7 @@ export default function OtherAspectsCard({
       <div
         className={classes.image}
         style={{
-          backgroundImage: `url(images/components/other-aspects-${index + 1}.jpg)`,
+          backgroundImage: `url(images/components/other-aspects-${index + 1}.webp)`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

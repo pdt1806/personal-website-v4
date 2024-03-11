@@ -2,6 +2,19 @@
   height: rem(240px);
   background-size: cover;
   background-position: center;
+
+  @mixin hover {
+    & .image {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  transition: transform 500ms ease;
 }
 
 .content {

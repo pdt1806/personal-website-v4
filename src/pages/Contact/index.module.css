@@ -16,6 +16,7 @@
 
 .description {
   max-width: rem(300px);
+  color: var(--mantine-color-dimmed);
 
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;

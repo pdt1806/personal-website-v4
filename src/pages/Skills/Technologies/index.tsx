@@ -31,6 +31,9 @@ const backEndDevelopment: Technologies[] = [
   {
     name: 'Python',
   },
+  {
+    name: 'JavaScript',
+  },
 ];
 
 const webAndNet: Technologies[] = [
@@ -106,25 +109,27 @@ export default function Technologies() {
             <Accordion chevronPosition="right" variant="separated">
               {[frontEndDevelopment, backEndDevelopment, webAndNet, design].map(
                 (section, index) => (
-                  <>
-                    <Accordion.Item className={classes.item} value={technologiesList[index]}>
-                      <Accordion.Control>{technologiesList[index]}</Accordion.Control>
-                      <Accordion.Panel>
-                        <Group>
-                          {section.map((technology) => (
-                            <Tooltip key={technology.name} label={technology.name}>
-                              <Image
-                                src={`icons/tech/${technology.icon ?? technology.name.toLowerCase()}.svg`}
-                                alt={technology.name}
-                                height={28}
-                                width={28}
-                              />
-                            </Tooltip>
-                          ))}
-                        </Group>
-                      </Accordion.Panel>
-                    </Accordion.Item>
-                  </>
+                  <Accordion.Item
+                    className={classes.item}
+                    value={technologiesList[index]}
+                    key={technologiesList[index]}
+                  >
+                    <Accordion.Control>{technologiesList[index]}</Accordion.Control>
+                    <Accordion.Panel>
+                      <Group>
+                        {section.map((technology) => (
+                          <Tooltip key={technology.name} label={technology.name}>
+                            <Image
+                              src={`icons/tech/${technology.icon ?? technology.name.toLowerCase()}.svg`}
+                              alt={technology.name}
+                              height={28}
+                              width={28}
+                            />
+                          </Tooltip>
+                        ))}
+                      </Group>
+                    </Accordion.Panel>
+                  </Accordion.Item>
                 )
               )}
             </Accordion>

@@ -1,5 +1,5 @@
+import SocialLinks from '@/components/SocialLinks';
 import {
-  ActionIcon,
   Alert,
   Box,
   Button,
@@ -10,39 +10,15 @@ import {
   TextInput,
   Textarea,
   Title,
+  rem,
 } from '@mantine/core';
 import { isEmail, isNotEmpty, useForm } from '@mantine/form';
-import {
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandX,
-  IconInfoCircle,
-} from '@tabler/icons-react';
+import { useMediaQuery } from '@mantine/hooks';
+import { IconInfoCircle } from '@tabler/icons-react';
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { Link } from 'react-router-dom';
 import { ContactIconsList } from './icons';
 import classes from './index.module.css';
-
-const social = [
-  {
-    icon: IconBrandGithub,
-    to: 'https://github.com/pdt1806',
-  },
-  {
-    icon: IconBrandInstagram,
-    to: 'https://instagram.com/benny_ng08/',
-  },
-  {
-    icon: IconBrandFacebook,
-    to: 'https://facebook.com/pdteggman/',
-  },
-  {
-    icon: IconBrandX,
-    to: 'https://x.com/pdteggman/',
-  },
-];
 
 export function Contact() {
   const form = useForm({
@@ -59,22 +35,10 @@ export function Contact() {
     },
   });
 
-  const icons = social.map((Icon, index) => (
-    <ActionIcon
-      key={index}
-      size={28}
-      className={classes.social}
-      variant="transparent"
-      component={Link}
-      to={Icon.to}
-      target="_href"
-    >
-      <Icon.icon size="1.4rem" stroke={1.5} />
-    </ActionIcon>
-  ));
-
   const [messageSending, setMessageSending] = useState(false);
   const [messageSent, setMessageSent] = useState<boolean | null>(null);
+
+  const isMobile = useMediaQuery('(max-width: 48em)');
 
   return (
     <Container className={classes.wrapper}>
@@ -87,7 +51,15 @@ export function Contact() {
 
           <ContactIconsList />
 
-          <Group mt="xl">{icons}</Group>
+          <Group mt="xl">
+            <SocialLinks
+              color="black"
+              size={30}
+              page="contact"
+              variant="transparent"
+              style={{ width: rem(30), height: rem(30) }}
+            />
+          </Group>
         </div>
         <Box
           className={classes.form}
@@ -143,7 +115,11 @@ export function Contact() {
             <ReCAPTCHA
               sitekey="6LdnCkIpAAAAAKGhynf4oAl_6wzJapkYWNQYhDbg"
               onChange={(value) => form.setFieldValue('g-recaptcha-response', value as string)}
-              style={{ marginTop: 'var(--mantine-spacing-md)' }}
+              style={{
+                marginTop: 'var(--mantine-spacing-md)',
+                transform: isMobile ? 'scale(0.8)' : 'scale(1)',
+                transformOrigin: '0 0',
+              }}
             />
           )}
           <Group justify="flex-end" mt="md">

@@ -16,14 +16,16 @@ export function WorksBox({
   url: string;
 }) {
   return (
-    <Card
-      radius="md"
-      className={classes.card}
-      style={{
-        backgroundImage: `url(${img})`,
-      }}
-      mb="lg"
-    >
+    <Card radius="md" className={classes.card} mb="lg">
+      <div
+        className={classes.image}
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       <Overlay className={classes.overlay} opacity={0.55} zIndex={0} />
       <div className={classes.content}>
         <Title order={2} className={classes.title}>

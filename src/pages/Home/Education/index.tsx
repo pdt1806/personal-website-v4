@@ -61,13 +61,17 @@ export default function Education() {
                 >
                   <Flex direction="column" align="center" justify="center" h="100%">
                     <img
-                      src="images/components/antelope-high-school-logo.png"
+                      src="images/components/antelope-high-school-logo.webp"
                       alt="Antelope High School"
-                      style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
+                      style={{
+                        height: '120px',
+                        width: '180px',
+                        marginBottom: 'var(--mantine-spacing-md)',
+                      }}
                     />
-                    <Title order={3} c="white" ta="center">
+                    <Text fw="bold" fz="xl" c="white" ta="center">
                       Antelope High School
-                    </Title>
+                    </Text>
                     <Text size="sm" c="white" ta="center">
                       Nov 2022 - expected Jun 2026
                     </Text>
@@ -78,7 +82,7 @@ export default function Education() {
             <BackgroundImage
               p="md"
               h="100%"
-              src="images/components/antelope-high-school.jpg"
+              src="images/components/antelope-high-school.webp"
               radius="md"
               onMouseEnter={() => !isMobile && setOverlayAnHS(true)}
             />
@@ -108,13 +112,17 @@ export default function Education() {
                     >
                       <Flex direction="column" align="center" justify="center" h="100%">
                         <img
-                          src="images/components/tqt1-secondary-school-logo.png"
+                          src="images/components/tqt1-secondary-school-logo.webp"
                           alt="Tran Quoc Toan 1 Secondary School"
-                          style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
+                          style={{
+                            height: '120px',
+                            width: '198.14px',
+                            marginBottom: 'var(--mantine-spacing-md)',
+                          }}
                         />
-                        <Title order={3} c="white" ta="center">
+                        <Text fw="bold" fz="xl" c="white" ta="center">
                           Tran Quoc Toan 1 Secondary School
-                        </Title>
+                        </Text>
                         <Text size="sm" c="white" ta="center">
                           Sep 2021 - Oct 2022
                         </Text>
@@ -125,7 +133,7 @@ export default function Education() {
                 <BackgroundImage
                   p="md"
                   h="100%"
-                  src="images/components/tqt1-secondary-school.jpg"
+                  src="images/components/tqt1-secondary-school.webp"
                   radius="md"
                   onMouseEnter={() => !isMobile && setOverlayTQT1(true)}
                 />
@@ -147,13 +155,17 @@ export default function Education() {
                     >
                       <Flex direction="column" align="center" justify="center" h="100%">
                         <img
-                          src="images/components/the-asian-international-school-logo.png"
+                          src="images/components/the-asian-international-school-logo.webp"
                           alt="The Asian International School"
-                          style={{ height: '120px', marginBottom: 'var(--mantine-spacing-md)' }}
+                          style={{
+                            height: '120px',
+                            width: '120px',
+                            marginBottom: 'var(--mantine-spacing-md)',
+                          }}
                         />
-                        <Title order={3} c="white" ta="center">
+                        <Text fw="bold" fz="xl" c="white" ta="center">
                           The Asian International School
-                        </Title>
+                        </Text>
                         <Text size="sm" c="white" ta="center">
                           Aug 2014 - May 2021
                         </Text>
@@ -164,7 +176,7 @@ export default function Education() {
                 <BackgroundImage
                   p="md"
                   h="100%"
-                  src="images/components/the-asian-international-school.jpg"
+                  src="images/components/the-asian-international-school.webp"
                   radius="md"
                   onMouseEnter={() => !isMobile && setOverlayAIS(true)}
                 />
