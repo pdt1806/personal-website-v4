@@ -11,8 +11,8 @@ export default function Footer() {
             <img
               src="icons/webIcon.svg"
               alt="Logo"
-              width={35}
-              height={35}
+              width={30}
+              height={30}
               style={{ pointerEvents: 'none' }}
             />
             <Text fz="lg" fw="bold">

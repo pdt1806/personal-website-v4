@@ -90,9 +90,9 @@ export default function Education() {
           <Grid gutter="md">
             <Grid.Col>
               <Flex h={TERTIARY_COL_HEIGHT} direction="column" align="center" justify="center">
-                <Title order={2}>Vietnam</Title>
+                <Title order={2}>Schools in Vietnam</Title>
                 <Text size="sm" c="dimmed" ta="center">
-                  Where I spent most of my childhood growing and learning.
+                  Where I grew and learned the most during my early years.
                 </Text>
               </Flex>
             </Grid.Col>

@@ -28,8 +28,8 @@ export function Header() {
             <img
               src="icons/webIcon.svg"
               alt="Logo"
-              width={35}
-              height={35}
+              width={30}
+              height={30}
               style={{ pointerEvents: 'none' }}
             />
             <Title order={4}>Benny Nguyen</Title>
