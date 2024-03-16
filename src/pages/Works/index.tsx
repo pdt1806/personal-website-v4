@@ -1,9 +1,9 @@
+import NextPageAffix from '@/components/NextPageAffix';
 import { WorksBox } from '@/components/WorksBox';
-import { Affix, Box, Button, Container, Text, Title, Transition, rem } from '@mantine/core';
+import { Box, Container, Text, Title } from '@mantine/core';
 import { useMediaQuery, useWindowScroll } from '@mantine/hooks';
 import { IconPhone } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import classes from './index.module.css';
 
 const worksLayout = [
@@ -113,23 +113,7 @@ export default function Works() {
       </Box>
 
       {affixVisible && (
-        <Affix position={{ bottom: 20, right: 20 }}>
-          <Transition
-            transition="slide-up"
-            mounted={document.body.scrollHeight - (isMobile ? 1150 : 1300) < scroll.y}
-          >
-            {(transitionStyles) => (
-              <Button
-                leftSection={<IconPhone style={{ width: rem(16), height: rem(16) }} />}
-                style={transitionStyles}
-                component={Link}
-                to="/contact"
-              >
-                Contact me
-              </Button>
-            )}
-          </Transition>
-        </Affix>
+        <NextPageAffix isMobile={isMobile} Icon={IconPhone} text="Contact me" to="/contact" />
       )}
     </Container>
   );
