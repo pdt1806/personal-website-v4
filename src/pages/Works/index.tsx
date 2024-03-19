@@ -83,7 +83,7 @@ export default function Works() {
         Works
       </Title>
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        Here are some notable projects that I have created with love and passion.
+        A few noteworthy projects crafted with dedication and enthusiasm.
       </Text>
       <Box mt="xl">
         {worksLayout.map((section, index) => (
