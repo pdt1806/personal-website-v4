@@ -9,7 +9,7 @@ const desc = [
 ];
 
 export default function MoreAboutMe() {
-  const isMobile = useMediaQuery('(max-width: 62em)');
+  const isMobile = useMediaQuery('(max-width: 75em)');
 
   return (
     <Box mt="xl">

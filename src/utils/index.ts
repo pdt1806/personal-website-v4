@@ -27,3 +27,10 @@ export const socialLinks = [
     to: 'https://x.com/pdteggman/',
   },
 ];
+
+export const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};

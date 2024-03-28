@@ -1,12 +1,10 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import { createBrowserRouter, RouteObject, RouterProvider } from 'react-router-dom';
+import './App.css';
 import Layout from './components/Layout';
 import { Error404 } from './pages/404';
-import { Contact } from './pages/Contact';
-import Home from './pages/Home';
-import Skills from './pages/Skills';
-import Works from './pages/Works';
+import All from './pages/All';
 
 const routes: RouteObject[] = [
   {
@@ -15,19 +13,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/skills',
-        element: <Skills />,
-      },
-      {
-        path: '/works',
-        element: <Works />,
-      },
-      {
-        path: '/contact',
-        element: <Contact />,
+        element: <All />,
       },
       {
         path: '*',

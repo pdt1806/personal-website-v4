@@ -58,6 +58,7 @@ export default function Education() {
                   radius="md"
                   onMouseLeave={() => !isMobile && setOverlayAnHS(false)}
                   style={styles}
+                  p="md"
                 >
                   <Flex direction="column" align="center" justify="center" h="100%">
                     <img
@@ -109,6 +110,7 @@ export default function Education() {
                       radius="md"
                       onMouseLeave={() => !isMobile && setOverlayTQT1(false)}
                       style={styles}
+                      p="md"
                     >
                       <Flex direction="column" align="center" justify="center" h="100%">
                         <img
@@ -152,6 +154,7 @@ export default function Education() {
                       radius="md"
                       onMouseLeave={() => !isMobile && setOverlayAIS(false)}
                       style={styles}
+                      p="md"
                     >
                       <Flex direction="column" align="center" justify="center" h="100%">
                         <img

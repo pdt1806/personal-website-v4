@@ -1,47 +1,44 @@
-import { Box, Burger, Button, Divider, Drawer, Group, ScrollArea, Title, rem } from '@mantine/core';
+import { scrollToSection } from '@/utils';
+import { Box, Burger, Button, Divider, Drawer, Group, ScrollArea, Text, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Link } from 'react-router-dom';
+import Brand from '../Brand';
 import classes from './index.module.css';
 
 export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
+  const scrollAndCloseDrawer = (id: string) => {
+    closeDrawer();
+    scrollToSection(id);
+  };
+
   const links = (
     <>
-      <Link to="/" className={classes.link} onClick={closeDrawer}>
-        Home
-      </Link>
-      <Link to="/skills" className={classes.link} onClick={closeDrawer}>
+      <Text className={classes.link} onClick={() => scrollAndCloseDrawer('introduction')}>
+        Introduction
+      </Text>
+      <Text className={classes.link} onClick={() => scrollAndCloseDrawer('skills')}>
         Skills
-      </Link>
-      <Link to="/works" className={classes.link} onClick={closeDrawer}>
+      </Text>
+      <Text className={classes.link} onClick={() => scrollAndCloseDrawer('works')}>
         Works
-      </Link>
+      </Text>
     </>
+  );
+
+  const contactMeButton = (
+    <Button onClick={() => scrollAndCloseDrawer('contact')}>Contact me</Button>
   );
 
   return (
     <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Group>
-            <img
-              src="icons/webIcon.svg"
-              alt="Logo"
-              width={30}
-              height={30}
-              style={{ pointerEvents: 'none' }}
-            />
-            <Title order={4}>Benny Nguyen</Title>
-          </Group>
+          <Brand />
           <Group h="100%" gap={0} visibleFrom="sm">
             {links}
           </Group>
-          <Group visibleFrom="sm">
-            <Button component={Link} to="/contact" onClick={closeDrawer}>
-              Contact me
-            </Button>
-          </Group>
+          <Group visibleFrom="sm">{contactMeButton}</Group>
           <Burger
             opened={drawerOpened}
             onClick={toggleDrawer}
@@ -51,27 +48,35 @@ export function Header() {
         </Group>
       </header>
 
-      <Drawer
+      <Drawer.Root
         opened={drawerOpened}
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Navigation"
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-          {links}
+        <Drawer.Overlay />
+        <Drawer.Content>
+          <Drawer.Header>
+            <Drawer.Title>
+              <Brand />
+            </Drawer.Title>
+            <Drawer.CloseButton />
+          </Drawer.Header>
+          <Drawer.Body>
+            <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+              {links}
 
-          <Divider my="sm" />
+              <Divider my="sm" />
 
-          <Group justify="center" grow pb="xl" px="md">
-            <Button component={Link} to="/contact" onClick={closeDrawer}>
-              Contact me
-            </Button>
-          </Group>
-        </ScrollArea>
-      </Drawer>
+              <Group justify="center" grow pb="xl" px="md">
+                {contactMeButton}
+              </Group>
+            </ScrollArea>
+          </Drawer.Body>
+        </Drawer.Content>
+      </Drawer.Root>
     </Box>
   );
 }

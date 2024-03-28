@@ -1,9 +1,13 @@
 import SocialLinks from '@/components/SocialLinks';
 import {
   Alert,
+  Anchor,
   Box,
   Button,
+  Center,
   Container,
+  Divider,
+  Flex,
   Group,
   SimpleGrid,
   Text,
@@ -16,7 +20,7 @@ import { isEmail, isNotEmpty, useForm } from '@mantine/form';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconInfoCircle } from '@tabler/icons-react';
 import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { ContactIconsList } from './icons';
 import classes from './index.module.css';
 
@@ -41,16 +45,24 @@ export function Contact() {
   const isMobile = useMediaQuery('(max-width: 48em)');
 
   return (
-    <Container className={classes.wrapper}>
-      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
-        <div>
-          <Title className={classes.title}>Contact me</Title>
-          <Text className={classes.description} mt="sm" mb={30}>
-            Leave your email and I will get back to you within 24 hours
+    <Container className={classes.wrapper} size="lg" id="contact">
+      <Divider my="xl" />
+      <Center mb="calc(1.5 * var(--mantine-spacing-xl))">
+        <Flex direction="column" align="center">
+          <Title order={1} ta="center">
+            Interested in collaborating with me?
+          </Title>
+          <Text c="dimmed" mt="md" ta="center">
+            I'm always open to new opportunities and collaborations. Feel free to contact me!
           </Text>
-
+        </Flex>
+      </Center>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
+        <Box>
+          <Title order={2} mb="xl">
+            Contact information
+          </Title>
           <ContactIconsList />
-
           <Group mt="xl">
             <SocialLinks
               color="black"
@@ -60,7 +72,7 @@ export function Contact() {
               style={{ width: rem(30), height: rem(30) }}
             />
           </Group>
-        </div>
+        </Box>
         <Box
           className={classes.form}
           component="form"
@@ -106,22 +118,33 @@ export function Contact() {
             required
             label="Your message"
             placeholder="I want to talk with you about..."
-            minRows={4}
+            minRows={3}
+            maxRows={3}
+            autosize
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
             {...form.getInputProps('message')}
           />
           {messageSent == null && (
-            <ReCAPTCHA
-              sitekey="6LdnCkIpAAAAAKGhynf4oAl_6wzJapkYWNQYhDbg"
-              onChange={(value) => form.setFieldValue('g-recaptcha-response', value as string)}
-              style={{
-                marginTop: 'var(--mantine-spacing-md)',
-                transform: isMobile ? 'scale(0.8)' : 'scale(1)',
-                transformOrigin: '0 0',
-              }}
-            />
+            <GoogleReCaptchaProvider reCaptchaKey="6LfIIKgpAAAAAHAr5zyz8L2q74HqOkdFTa4xPgJE">
+              <GoogleReCaptcha
+                onVerify={(token) => {
+                  form.setFieldValue('g-recaptcha-response', token as string);
+                }}
+              />
+            </GoogleReCaptchaProvider>
           )}
+          <Text c="dimmed" fz="xs" mt="xs">
+            This site is protected by reCAPTCHA and the Google{' '}
+            <Anchor href="https://policies.google.com/privacy" fz="xs">
+              Privacy Policy
+            </Anchor>{' '}
+            and{' '}
+            <Anchor href="https://policies.google.com/terms" fz="xs">
+              Terms of Service
+            </Anchor>{' '}
+            apply.
+          </Text>
           <Group justify="flex-end" mt="md">
             <Button type="submit" disabled={messageSent != null} loading={messageSending}>
               Send message

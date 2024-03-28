@@ -1,56 +1,36 @@
 import { HeroHeader } from '@/components/HeroHeader';
-import NextPageAffix from '@/components/NextPageAffix';
 import { Box, Container, Divider } from '@mantine/core';
-import { useMediaQuery, useWindowScroll } from '@mantine/hooks';
-import { IconArrowRight } from '@tabler/icons-react';
-import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@mantine/hooks';
 import Education from './Education';
+import Introduction from './Introduction';
 import MoreAboutMe from './MoreAboutMe';
 import OtherAspects from './OtherAspects';
 
 export default function Home() {
   const isMobile = useMediaQuery('(max-width: 62em)');
-  const [scroll, _] = useWindowScroll();
-
-  const [affixVisible, setAffixVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAffixVisible(true);
-    }, 250);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const mainContent = (
     <>
-      <Divider mt="xl" mb="xl" />
+      <Divider my="xl" />
       <MoreAboutMe />
-      <Divider mt="xl" mb="xl" />
+      <Divider my="xl" />
       <Education />
-      <Divider mt="xl" mb="xl" />
+      <Divider my="xl" />
       <OtherAspects />
-      {affixVisible && (
-        <NextPageAffix
-          isMobile={isMobile}
-          Icon={IconArrowRight}
-          text="Check out my Skills"
-          to="/skills"
-        />
-      )}
     </>
   );
 
   return (
     <>
       <HeroHeader />
+      <Introduction />
       {isMobile ? (
         <Container>{mainContent}</Container>
       ) : (
         <Box
           style={{
-            marginLeft: 'calc(var(--mantine-spacing-xl) * 3)',
-            marginRight: 'calc(var(--mantine-spacing-xl) * 3)',
+            marginLeft: 'calc(var(--mantine-spacing-xl) * 5)',
+            marginRight: 'calc(var(--mantine-spacing-xl) * 5)',
           }}
         >
           {mainContent}

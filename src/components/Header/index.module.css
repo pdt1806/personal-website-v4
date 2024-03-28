@@ -6,6 +6,7 @@
 }
 
 .link {
+  cursor: pointer;
   display: flex;
   align-items: center;
   height: 100%;

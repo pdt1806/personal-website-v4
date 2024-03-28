@@ -1,9 +1,6 @@
-import NextPageAffix from '@/components/NextPageAffix';
 import { WorksBox } from '@/components/WorksBox';
-import { Box, Container, Text, Title } from '@mantine/core';
-import { useMediaQuery, useWindowScroll } from '@mantine/hooks';
-import { IconPhone } from '@tabler/icons-react';
-import { useEffect, useState } from 'react';
+import { Badge, Box, Center, Container, Text, Title } from '@mantine/core';
+import { Dots } from '../Home/Introduction/Dots';
 import classes from './index.module.css';
 
 const worksLayout = [
@@ -65,56 +62,58 @@ const worksLayout = [
 ];
 
 export default function Works() {
-  const [scroll, _] = useWindowScroll();
-  const isMobile = useMediaQuery('(max-width: 48em)');
-  const [affixVisible, setAffixVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAffixVisible(true);
-    }, 250);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <Container mt="xl">
-      <Title order={1} ta="center" mt="sm">
-        Works
-      </Title>
-      <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        A few noteworthy projects crafted with dedication and enthusiasm.
-      </Text>
-      <Box mt="xl">
-        {worksLayout.map((section, index) => (
-          <div key={`works_section_${index}`}>
-            {section.title && (
-              <Box mt="xl" mb="lg">
-                <Title order={2} ta="center">
-                  {section.title}
-                </Title>
-                <Text c="dimmed" ta="center" mt="xs">
-                  {section.description}
-                </Text>
-              </Box>
-            )}
-            {section.works.map((work) => (
-              <WorksBox
-                title={work.title}
-                description={work.description}
-                img={work.img}
-                source={work.source}
-                url={work.url}
-                key={work.title}
-              />
-            ))}
-          </div>
-        ))}
-      </Box>
+    <>
+      <Box className={classes.wrapper} size={1600} bg="blue" id="works">
+        <Dots className={classes.dots} style={{ left: 0, top: 70 }} />
+        <Dots className={classes.dots} style={{ left: 60, top: 70 }} />
+        <Dots className={classes.dots} style={{ left: 0, top: 210 }} />
+        <Dots className={classes.dots} style={{ right: 0, top: 130 }} />
 
-      {affixVisible && (
-        <NextPageAffix isMobile={isMobile} Icon={IconPhone} text="Contact me" to="/contact" />
-      )}
-    </Container>
+        <div className={classes.inner}>
+          <Center>
+            <Badge color="white" c="blue">
+              Pride Hall
+            </Badge>
+          </Center>
+          <Title order={1} ta="center" mt="sm" c="white">
+            Works
+          </Title>
+          <Text c="white" className={classes.description} ta="center" mt="md" mb="">
+            Over time, I've put a lot of effort and passion into creating web apps and digital
+            experiences. It's been exciting to tackle challenges each time I design, build, or
+            revamp something.
+          </Text>
+        </div>
+      </Box>
+      <Container mt="-153" size="lg">
+        <Box mt="xl">
+          {worksLayout.map((section, index) => (
+            <div key={`works_section_${index}`}>
+              {section.title && (
+                <Box mt="xl" mb="lg">
+                  <Title order={2} ta="center">
+                    {section.title}
+                  </Title>
+                  <Text c="dimmed" ta="center" mt="xs">
+                    {section.description}
+                  </Text>
+                </Box>
+              )}
+              {section.works.map((work) => (
+                <WorksBox
+                  title={work.title}
+                  description={work.description}
+                  img={work.img}
+                  source={work.source}
+                  url={work.url}
+                  key={work.title}
+                />
+              ))}
+            </div>
+          ))}
+        </Box>
+      </Container>
+    </>
   );
 }
