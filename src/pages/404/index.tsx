@@ -7,17 +7,24 @@ export function Error404() {
     <Container className={classes.root}>
       <SimpleGrid spacing={{ base: 40, sm: 80 }} cols={{ base: 1, sm: 2 }}>
         <Box className={classes.mobileImage}>
-          <Image src="/images/errors/404.svg" className={classes.mobileImage} />
-          <Text size="sm" c="dimmed" ta="center">
-            <Link
-              to="https://www.freepik.com/free-vector/page-found-concept-illustration_7887410.htm#query=404%20page&position=4&from_view=keyword&track=ais&uuid=4f5238cf-1545-49fa-9cc2-c9a7012eeb9b"
-              target="_blank"
-              style={{ color: 'white' }}
-            >
-              Image by storyset
-            </Link>{' '}
-            on Freepik
-          </Text>
+          <Image
+            src="/images/components/404.svg"
+            className={classes.mobileImage}
+            maw={512}
+            ml="auto"
+            mr="auto"
+          />
+          <Link
+            to="https://freepik.com"
+            target="_blank"
+            style={{
+              color: 'var(--mantine-color-dimmed)',
+            }}
+          >
+            <Text size="sm" ta="center" mt="lg">
+              Designed by storyset / Freepik
+            </Text>
+          </Link>
         </Box>
         <Box className={classes.content}>
           <Title className={classes.title}>Something is not right...</Title>
@@ -38,16 +45,17 @@ export function Error404() {
         </Box>
         <Box className={classes.desktopImage}>
           <Image src="/images/components/404.svg" />
-          <Text size="sm" c="dimmed" ta="center">
-            <Link
-              to="https://www.freepik.com/free-vector/page-found-concept-illustration_7887410.htm#query=404%20page&position=4&from_view=keyword&track=ais&uuid=4f5238cf-1545-49fa-9cc2-c9a7012eeb9b"
-              target="_blank"
-              style={{ color: 'black' }}
-            >
-              Image by storyset
-            </Link>{' '}
-            on Freepik
-          </Text>
+          <Link
+            to="https://freepik.com"
+            target="_blank"
+            style={{
+              color: 'var(--mantine-color-dimmed)',
+            }}
+          >
+            <Text size="sm" ta="center" mt="lg">
+              Designed by storyset / Freepik
+            </Text>
+          </Link>
         </Box>
       </SimpleGrid>
     </Container>

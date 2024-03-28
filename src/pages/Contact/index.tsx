@@ -98,7 +98,7 @@ export function Contact() {
             disabled={messageSent != null}
             label="Full name"
             autoComplete="name"
-            placeholder="John Doe"
+            placeholder="Your name"
             required
             classNames={{ input: classes.input, label: classes.inputLabel }}
             {...form.getInputProps('fullName')}
@@ -136,11 +136,11 @@ export function Contact() {
           )}
           <Text c="dimmed" fz="xs" mt="xs">
             This site is protected by reCAPTCHA and the Google{' '}
-            <Anchor href="https://policies.google.com/privacy" fz="xs">
+            <Anchor href="https://policies.google.com/privacy" fz="xs" target="_blank">
               Privacy Policy
             </Anchor>{' '}
             and{' '}
-            <Anchor href="https://policies.google.com/terms" fz="xs">
+            <Anchor href="https://policies.google.com/terms" fz="xs" target="_blank">
               Terms of Service
             </Anchor>{' '}
             apply.

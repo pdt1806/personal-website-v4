@@ -1,15 +1,21 @@
 import { scrollToSection } from '@/utils';
 import { Box, Burger, Button, Divider, Drawer, Group, ScrollArea, Text, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useNavigate } from 'react-router-dom';
 import Brand from '../Brand';
 import classes from './index.module.css';
 
 export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
+  const navigate = useNavigate();
+
   const scrollAndCloseDrawer = (id: string) => {
-    closeDrawer();
-    scrollToSection(id);
+    navigate('/');
+    setTimeout(() => {
+      closeDrawer();
+      scrollToSection(id);
+    }, 0);
   };
 
   const links = (

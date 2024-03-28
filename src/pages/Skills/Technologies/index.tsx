@@ -85,7 +85,13 @@ export default function Technologies() {
       <Container size="lg">
         <Grid gutter={50}>
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <Image src={'images/components/technologies.svg'} alt="Technologies" />
+            <Image
+              src={'images/components/technologies.svg'}
+              alt="Technologies"
+              maw={512}
+              mr="auto"
+              ml="auto"
+            />
             <Link
               to="https://freepik.com"
               target="_blank"

@@ -8,11 +8,3 @@
   margin-right: var(--mantine-spacing-md);
   background-color: transparent;
 }
-
-.title {
-  color: var(--mantine-color-dimmed);
-}
-
-.description {
-  color: var(--mantine-color-black);
-}

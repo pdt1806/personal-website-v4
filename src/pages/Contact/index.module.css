@@ -10,19 +10,6 @@
   }
 }
 
-.title {
-  line-height: 1;
-}
-
-.description {
-  max-width: rem(300px);
-  color: var(--mantine-color-dimmed);
-
-  @media (max-width: $mantine-breakpoint-sm) {
-    max-width: 100%;
-  }
-}
-
 .form {
   background-color: var(--mantine-color-white);
   padding: var(--mantine-spacing-xl);
