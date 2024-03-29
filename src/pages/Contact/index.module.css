@@ -1,40 +1,51 @@
 .wrapper {
-  min-height: rem(400px);
-  margin-top: calc(var(--mantine-spacing-xl) * 2);
-  margin-bottom: calc(var(--mantine-spacing-xl) * 2);
+  display: flex;
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+  border-radius: var(--mantine-radius-lg);
+  padding: rem(5px);
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
+  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding: calc(var(--mantine-spacing-xl) * 1.5);
-    margin-top: 0;
-    margin-bottom: 0;
+    flex-direction: column;
   }
 }
 
 .form {
-  background-color: var(--mantine-color-white);
+  flex: 1;
   padding: var(--mantine-spacing-xl);
-  border-radius: var(--mantine-radius-md);
-  box-shadow: var(--mantine-shadow-lg);
-}
+  padding-left: calc(var(--mantine-spacing-xl) * 2);
+  border-left: 0;
 
-.social {
-  color: var(--mantine-color-black);
-
-  @mixin hover {
-    color: var(--mantine-color-blue-7);
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-md);
+    padding-left: var(--mantine-spacing-md);
   }
 }
 
-.input {
-  background-color: var(--mantine-color-white);
-  border-color: var(--mantine-color-gray-4);
-  color: var(--mantine-color-black);
+.contacts {
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: var(--mantine-radius-lg);
+  background-color: var(--mantine-color-blue-6);
+  background-size: cover;
+  background-position: center;
+  border: rem(1px) solid transparent;
+  padding: var(--mantine-spacing-xl);
+  flex: 0 0 rem(280px);
 
-  &::placeholder {
-    color: var(--mantine-color-gray-5);
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-sm);
+    padding-left: var(--mantine-spacing-md);
   }
 }
 
-.inputLabel {
-  color: var(--mantine-color-black);
+.title {
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-xl);
+  }
 }

@@ -94,7 +94,6 @@ export default function Technologies() {
             />
             <Link
               to="https://freepik.com"
-              target="_blank"
               style={{
                 color: 'var(--mantine-color-dimmed)',
               }}

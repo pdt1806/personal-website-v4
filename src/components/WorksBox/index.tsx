@@ -35,10 +35,10 @@ export function WorksBox({
           {description}
         </Text>
         <Group className={classes.action}>
-          <Button c="white" color="black" size="xs" component={Link} to={source} target="_blank">
+          <Button c="white" color="black" size="xs" component={Link} to={source}>
             Source code
           </Button>
-          <Button variant="white" color="dark" size="xs" component={Link} to={url} target="_blank">
+          <Button variant="white" color="dark" size="xs" component={Link} to={url}>
             Visit
           </Button>
         </Group>

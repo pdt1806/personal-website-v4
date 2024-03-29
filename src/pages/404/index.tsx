@@ -16,7 +16,6 @@ export function Error404() {
           />
           <Link
             to="https://freepik.com"
-            target="_blank"
             style={{
               color: 'var(--mantine-color-dimmed)',
             }}
@@ -47,7 +46,6 @@ export function Error404() {
           <Image src="/images/components/404.svg" />
           <Link
             to="https://freepik.com"
-            target="_blank"
             style={{
               color: 'var(--mantine-color-dimmed)',
             }}

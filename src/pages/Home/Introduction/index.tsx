@@ -16,20 +16,16 @@ export default function Introduction() {
       <div className={classes.inner}>
         <Center>
           <Flex direction={isMobile ? 'column' : 'row'} align="center">
-            <Avatar
-              src="/images/2022-me.webp"
-              size={isMobile ? 280 : 320}
-              mb={isMobile ? 'md' : '0'}
-            />
+            <Avatar src="/images/2022-me.webp" size={300} mb={isMobile ? 'xl' : '0'} />
             <Box maw={800} ml={isMobile ? '0' : 'xl'}>
               <Title order={2} ta={isMobile ? 'center' : 'left'}>
                 Hi, I'm Benny. Nice to meet you!
               </Title>
               <Text size="lg" mt="md" ta={isMobile ? 'center' : 'left'}>
-                Since I started working as a front-end developer in 2023, I've been creating digital
-                products for companies and startups, teaming up with talented people. Although I
-                mainly focus on front-end work, I'm also interested in back-end development. I'm
-                young and confident I'll achieve more in the future.
+                Since I started working as a front-end developer in 2023, I've been creating
+                personal projects and web apps of small businesses and startups, teaming up with
+                talented people. Although I mainly focus on front-end work, I'm also interested in
+                back-end development. I'm young and confident I'll achieve more in the future.
               </Text>
             </Box>
           </Flex>

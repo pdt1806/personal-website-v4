@@ -25,7 +25,6 @@ export default function SocialLinks({
       variant={variant}
       component={Link}
       to={link.to}
-      target="_href"
       c={color}
       color={color}
       className={className}

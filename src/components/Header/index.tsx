@@ -15,7 +15,7 @@ export function Header() {
     setTimeout(() => {
       closeDrawer();
       scrollToSection(id);
-    }, 0);
+    }, 10);
   };
 
   const links = (
