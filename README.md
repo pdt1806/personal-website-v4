@@ -5,3 +5,4 @@
 - [React](https://reactjs.org/)
 - [Mantine](https://mantine.dev/)
 - [Vite](https://vitejs.dev/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
