@@ -15,7 +15,6 @@ import {
   Title,
 } from '@mantine/core';
 import { isEmail, isNotEmpty, useForm } from '@mantine/form';
-import { useMediaQuery } from '@mantine/hooks';
 import { IconInfoCircle } from '@tabler/icons-react';
 import { useState } from 'react';
 import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
@@ -39,8 +38,6 @@ export default function Contact() {
 
   const [messageSending, setMessageSending] = useState(false);
   const [messageSent, setMessageSent] = useState<boolean | null>(null);
-
-  const isMobile = useMediaQuery('(max-width: 48em)');
 
   return (
     <Container id="contact">

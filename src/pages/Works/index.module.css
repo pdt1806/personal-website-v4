@@ -18,13 +18,13 @@
   position: relative;
   margin-top: calc(2 * var(--mantine-spacing-xl));
   padding-top: calc(3 * var(--mantine-spacing-xl));
-  padding-bottom: calc(6 * var(--mantine-spacing-xl));
+  padding-bottom: calc(6.5 * var(--mantine-spacing-xl));
 
   @media (max-width: $mantine-breakpoint-sm) {
     padding-left: var(--mantine-spacing-xl);
     padding-right: var(--mantine-spacing-xl);
     padding-top: calc(2.5 * var(--mantine-spacing-xl));
-    padding-bottom: calc(5.5 * var(--mantine-spacing-xl));
+    padding-bottom: calc(6 * var(--mantine-spacing-xl));
   }
 }
 

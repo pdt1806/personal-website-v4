@@ -86,7 +86,7 @@ export default function Works() {
           </Text>
         </div>
       </Box>
-      <Container mt="-153" size="lg">
+      <Container mt="calc(-140px - var(--mantine-spacing-xl))" size="lg">
         <Box mt="xl">
           {worksLayout.map((section, index) => (
             <div key={`works_section_${index}`}>
