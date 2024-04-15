@@ -16,7 +16,12 @@ export default function Introduction() {
       <div className={classes.inner}>
         <Center>
           <Flex direction={isMobile ? 'column' : 'row'} align="center">
-            <Avatar src="/images/2022-me.webp" size={300} mb={isMobile ? 'xl' : '0'} />
+            <Avatar
+              src="/images/2022-me.webp"
+              size={300}
+              mb={isMobile ? 'xl' : '0'}
+              alt="my-avatar"
+            />
             <Box maw={800} ml={isMobile ? '0' : 'xl'}>
               <Title order={2} ta={isMobile ? 'center' : 'left'}>
                 Hi, I'm Benny. Nice to meet you!
