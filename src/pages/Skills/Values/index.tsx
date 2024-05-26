@@ -31,8 +31,19 @@ const mockdata = [
 
 export function Values() {
   const theme = useMantineTheme();
-  const features = mockdata.map((feature) => (
-    <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
+  const features = mockdata.map((feature, index) => (
+    <Card
+      key={feature.title}
+      shadow="md"
+      radius="md"
+      className={classes.card}
+      padding="xl"
+      data-aos="zoom-in"
+      data-aos-once
+      data-aos-delay={index * 200}
+      data-aos-offset="250"
+      data-aos-duration="1000"
+    >
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}

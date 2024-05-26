@@ -1,5 +1,5 @@
-import OtherAspectsCard from '@/components/OtherAspectsCard';
 import { Box, Center, Title } from '@mantine/core';
+import OtherAspectsCard from '../../../components/OtherAspectsCard';
 
 const info = [
   {

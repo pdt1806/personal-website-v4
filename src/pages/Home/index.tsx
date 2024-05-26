@@ -1,6 +1,6 @@
-import { HeroHeader } from '@/components/HeroHeader';
 import { Box, Container, Divider } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { HeroHeader } from '../../components/HeroHeader';
 import Education from './Education';
 import Introduction from './Introduction';
 import MoreAboutMe from './MoreAboutMe';

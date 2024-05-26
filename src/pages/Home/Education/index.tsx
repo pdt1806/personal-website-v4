@@ -13,6 +13,7 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
+
 const PRIMARY_COL_HEIGHT = rem(500);
 
 export default function Education() {

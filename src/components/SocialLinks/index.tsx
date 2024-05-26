@@ -1,6 +1,6 @@
-import { socialLinks } from '@/utils';
 import { ActionIcon } from '@mantine/core';
 import { Link } from 'react-router-dom';
+import { socialLinks } from '../../utils';
 
 export default function SocialLinks({
   color,
@@ -19,7 +19,7 @@ export default function SocialLinks({
 }) {
   const icons = socialLinks.map((link) => (
     <ActionIcon
-      key={link.name + `_${page}`}
+      key={`${link.name}_${page}`}
       aria-label={link.name}
       size={size}
       variant={variant}

@@ -1,8 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Accordion, Container, Grid, Group, Image, Text, Title, Tooltip } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
+import { TechnologiesType } from '../../../utils/types';
 import classes from './index.module.css';
 
-const frontEndDevelopment: Technologies[] = [
+const frontEndDevelopment: TechnologiesType[] = [
   {
     name: 'React',
   },
@@ -17,7 +20,7 @@ const frontEndDevelopment: Technologies[] = [
   },
 ];
 
-const backEndDevelopment: Technologies[] = [
+const backEndDevelopment: TechnologiesType[] = [
   {
     name: 'Node.js',
     icon: 'nodejs',
@@ -36,7 +39,7 @@ const backEndDevelopment: Technologies[] = [
   },
 ];
 
-const webAndNet: Technologies[] = [
+const webAndNet: TechnologiesType[] = [
   {
     name: 'Raspberry Pi',
     icon: 'raspberry-pi',
@@ -52,7 +55,7 @@ const webAndNet: Technologies[] = [
   },
 ];
 
-const design: Technologies[] = [
+const design: TechnologiesType[] = [
   {
     name: 'Microsoft Powerpoint',
     icon: 'powerpoint',
@@ -80,17 +83,20 @@ const technologiesList = [
 ];
 
 export default function Technologies() {
+  const isMobile = useMediaQuery('(max-width: 62em)');
+
   return (
     <div className={classes.wrapper}>
       <Container size="lg">
         <Grid gutter={50}>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Image
-              src={'images/components/technologies.svg'}
+              src="images/components/technologies.svg"
               alt="Technologies"
               maw={512}
               mr="auto"
               ml="auto"
+              id="technologies-image"
             />
             <Link
               to="https://freepik.com"
@@ -118,6 +124,14 @@ export default function Technologies() {
                     className={classes.item}
                     value={technologiesList[index]}
                     key={technologiesList[index]}
+                    id={`technologies-accordion-${index}`}
+                    data-aos="fade-down"
+                    data-aos-once
+                    data-aos-anchor={isMobile ? null : '#technologies-image'}
+                    data-aos-anchor-placement={isMobile ? null : 'bottom-center'}
+                    data-aos-delay={isMobile ? 0 : index * 200}
+                    data-aos-duration="1000"
+                    data-aos-offset={isMobile ? 100 : 0}
                   >
                     <Accordion.Control>{technologiesList[index]}</Accordion.Control>
                     <Accordion.Panel>

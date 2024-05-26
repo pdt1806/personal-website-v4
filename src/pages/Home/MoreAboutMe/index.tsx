@@ -1,6 +1,6 @@
-import MoreAboutMeCard from '@/components/MoreAboutMeCard';
 import { Box, Center, Grid, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import MoreAboutMeCard from '../../../components/MoreAboutMeCard';
 
 const desc = [
   'Was born and raised in Vietnam until the age of 14, I’ve overcome numerous obstacles to become who I am today.',

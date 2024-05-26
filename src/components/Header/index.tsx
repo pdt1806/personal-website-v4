@@ -1,7 +1,7 @@
-import { scrollToSection } from '@/utils';
 import { Box, Burger, Button, Divider, Drawer, Group, ScrollArea, Text, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useNavigate } from 'react-router-dom';
+import { scrollToSection } from '../../utils';
 import Brand from '../Brand';
 import classes from './index.module.css';
 

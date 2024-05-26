@@ -1,5 +1,7 @@
-import { WorksBox } from '@/components/WorksBox';
+/* eslint-disable react/no-unescaped-entities */
+
 import { Badge, Box, Center, Container, Text, Title } from '@mantine/core';
+import { WorksBox } from '../../components/WorksBox';
 import { Dots } from '../Home/Introduction/Dots';
 import classes from './index.module.css';
 
@@ -101,14 +103,21 @@ export default function Works() {
                 </Box>
               )}
               {section.works.map((work) => (
-                <WorksBox
-                  title={work.title}
-                  description={work.description}
-                  img={work.img}
-                  source={work.source}
-                  url={work.url}
-                  key={work.title}
-                />
+                <div
+                  data-aos="flip-down"
+                  data-aos-once
+                  data-aos-offset="300"
+                  data-aos-duration="1000"
+                >
+                  <WorksBox
+                    title={work.title}
+                    description={work.description}
+                    img={work.img}
+                    source={work.source}
+                    url={work.url}
+                    key={work.title}
+                  />
+                </div>
               ))}
             </div>
           ))}
