@@ -128,7 +128,7 @@ export default function Technologies() {
                     data-aos="fade-down"
                     data-aos-once
                     data-aos-anchor={isMobile ? null : '#technologies-image'}
-                    data-aos-anchor-placement={isMobile ? null : 'bottom-center'}
+                    data-aos-anchor-placement={isMobile ? null : 'top-center'}
                     data-aos-delay={isMobile ? 0 : index * 200}
                     data-aos-duration="1000"
                     data-aos-offset={isMobile ? 100 : 0}
