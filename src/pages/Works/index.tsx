@@ -108,6 +108,7 @@ export default function Works() {
                   data-aos-once
                   data-aos-offset="300"
                   data-aos-duration="1000"
+                  key={work.title}
                 >
                   <WorksBox
                     title={work.title}
@@ -115,7 +116,6 @@ export default function Works() {
                     img={work.img}
                     source={work.source}
                     url={work.url}
-                    key={work.title}
                   />
                 </div>
               ))}
