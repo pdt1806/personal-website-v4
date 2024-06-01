@@ -43,14 +43,14 @@ export function Header() {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Brand />
-          <Group h="100%" gap={0} visibleFrom="sm">
+          <Group h="100%" gap={0} visibleFrom="md">
             {links}
           </Group>
-          <Group visibleFrom="sm">{contactMeButton}</Group>
+          <Group visibleFrom="md">{contactMeButton}</Group>
           <Burger
             opened={drawerOpened}
             onClick={toggleDrawer}
-            hiddenFrom="sm"
+            hiddenFrom="md"
             aria-label="burger-button"
           />
         </Group>
@@ -61,7 +61,7 @@ export function Header() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        hiddenFrom="sm"
+        hiddenFrom="md"
         zIndex={1000000}
       >
         <Drawer.Overlay />

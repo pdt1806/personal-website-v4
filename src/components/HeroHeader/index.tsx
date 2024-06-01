@@ -59,7 +59,8 @@ export function HeroHeader() {
             src="/images/me.png"
             alt="Benny Nguyen"
             className={classes.image}
-            fetchPriority="high"
+            // @ts-expect-error: intentional attribute
+            fetchpriority="high"
             onLoad={postLoading}
           />
         </Grid.Col>
