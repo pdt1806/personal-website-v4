@@ -33,7 +33,9 @@ export function Header() {
   );
 
   const contactMeButton = (
-    <Button onClick={() => scrollAndCloseDrawer('contact')}>Contact me</Button>
+    <Button onClick={() => scrollAndCloseDrawer('contact')} color="bn-blue">
+      Contact me
+    </Button>
   );
 
   return (

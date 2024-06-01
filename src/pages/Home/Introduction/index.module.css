@@ -1,7 +1,11 @@
+.bg {
+  background-color: var(--mantine-color-gray-0);
+}
+
 .wrapper {
   position: relative;
   padding-top: rem(75px);
-  padding-bottom: rem(55px);
+  padding-bottom: rem(75px);
   padding-left: var(--mantine-spacing-xl);
   padding-right: var(--mantine-spacing-xl);
 
@@ -18,5 +22,21 @@
 
 .dots {
   position: absolute;
-  color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+  color: light-dark(var(--mantine-color-dark-0), var(--mantine-color-dark-5));
+
+  @media (max-width: 1570px) {
+    opacity: 0.1;
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    opacity: 0;
+  }
+}
+
+.text {
+  color: black;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    text-align: center;
+  }
 }

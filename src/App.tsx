@@ -37,6 +37,20 @@ export default function App() {
     <MantineProvider
       theme={createTheme({
         fontFamily: 'Cabin, sans-serif',
+        colors: {
+          'bn-blue': [
+            '#e3faff',
+            '#d3effa',
+            '#a9dbf1',
+            '#7cc7e9',
+            '#58b6e1',
+            '#41abdd',
+            '#31a6dc',
+            '#1f90c4',
+            '#0a80b0',
+            '#006f9c',
+          ],
+        },
       })}
     >
       <RouterProvider router={router} />

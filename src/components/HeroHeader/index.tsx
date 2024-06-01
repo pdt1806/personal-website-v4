@@ -1,21 +1,38 @@
-import { Container, Group, Space, Text, Title, rem } from '@mantine/core';
+import { Box, Grid, Group, Image, Text, Title, rem } from '@mantine/core';
+import AOS from 'aos';
 import SocialLinks from '../SocialLinks';
 import classes from './index.module.css';
 
 export function HeroHeader() {
+  const postLoading = () => {
+    document.getElementById('initLoading')?.style.setProperty('opacity', '0');
+    document.body.style.setProperty('overflow', 'auto');
+    document.getElementById('initLoading')?.remove();
+    AOS.refreshHard();
+  };
+
   return (
-    <div className={classes.root}>
-      <Container size="lg">
-        <div className={classes.inner}>
+    <Box>
+      <Grid>
+        <Grid.Col span={{ base: 0, md: 0.5 }} />
+        <Grid.Col
+          span={{ base: 12, md: 6.5 }}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          mb={{ base: 0, md: 'xl' }}
+        >
           <div className={classes.content}>
-            <Title order={2} className={classes.title} fw={500} c="white">
+            <Title order={2} className={classes.title} fw={500}>
               This is
             </Title>
             <Text
               fw={700}
               className={classes.title}
               variant="gradient"
-              gradient={{ from: 'blue', to: 'lightblue' }}
+              gradient={{ from: 'blue', to: 'bn-blue' }}
             >
               Benny Nguyen
             </Text>
@@ -26,10 +43,9 @@ export function HeroHeader() {
               </Text>{' '}
               who enjoys and wants to know more about programming.
             </Text>
-            <Space mt={30} />
             <Group mt="xl">
               <SocialLinks
-                color="white"
+                color="black"
                 size={30}
                 page="hero"
                 variant="transparent"
@@ -37,8 +53,17 @@ export function HeroHeader() {
               />
             </Group>
           </div>
-        </div>
-      </Container>
-    </div>
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, md: 5 }}>
+          <Image
+            src="/images/me.png"
+            alt="Benny Nguyen"
+            className={classes.image}
+            fetchPriority="high"
+            onLoad={postLoading}
+          />
+        </Grid.Col>
+      </Grid>
+    </Box>
   );
 }

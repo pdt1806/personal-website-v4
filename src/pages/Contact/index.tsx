@@ -125,17 +125,22 @@ export default function Contact() {
             )}
             <Text c="dimmed" fz="xs" mt="xs">
               This site is protected by reCAPTCHA and the Google{' '}
-              <Anchor href="https://policies.google.com/privacy" fz="xs">
+              <Anchor href="https://policies.google.com/privacy" fz="xs" c="bn-blue">
                 Privacy Policy
               </Anchor>{' '}
               and{' '}
-              <Anchor href="https://policies.google.com/terms" fz="xs">
+              <Anchor href="https://policies.google.com/terms" fz="xs" c="bn-blue">
                 Terms of Service
               </Anchor>{' '}
               apply.
             </Text>
             <Group justify="flex-end" mt="md">
-              <Button type="submit" disabled={messageSent != null} loading={messageSending}>
+              <Button
+                type="submit"
+                disabled={messageSent != null}
+                loading={messageSending}
+                color="bn-blue"
+              >
                 Send message
               </Button>
             </Group>

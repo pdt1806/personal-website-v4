@@ -66,15 +66,15 @@ const worksLayout = [
 export default function Works() {
   return (
     <>
-      <Box className={classes.wrapper} size={1600} bg="blue" id="works">
+      <Box className={classes.wrapper} size={1600} bg="bn-blue" id="works">
         <Dots className={classes.dots} style={{ left: 0, top: 70 }} />
         <Dots className={classes.dots} style={{ left: 60, top: 70 }} />
-        <Dots className={classes.dots} style={{ left: 0, top: 210 }} />
-        <Dots className={classes.dots} style={{ right: 0, top: 130 }} />
+        <Dots className={classes.dots} style={{ left: 0, top: 230 }} />
+        <Dots className={classes.dots} style={{ right: 0, top: 150 }} />
 
         <div className={classes.inner}>
           <Center>
-            <Badge color="white" c="blue">
+            <Badge color="white" c="bn-blue">
               Pride Hall
             </Badge>
           </Center>

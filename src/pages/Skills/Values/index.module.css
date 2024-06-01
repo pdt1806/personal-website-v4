@@ -5,7 +5,7 @@
   &::after {
     content: '';
     display: block;
-    background-color: var(--mantine-color-blue-filled);
+    background-color: var(--mantine-color-bn-blue-6);
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-lg);
@@ -22,7 +22,7 @@
   &::after {
     content: '';
     display: block;
-    background-color: var(--mantine-color-blue-filled);
+    background-color: var(--mantine-color-bn-blue-6);
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
