@@ -29,7 +29,7 @@
   box-sizing: border-box;
   position: relative;
   border-radius: var(--mantine-radius-lg);
-  background-color: var(--mantine-color-blue-6);
+  background-color: var(--mantine-color-bn-blue-6);
   background-size: cover;
   background-position: center;
   border: rem(1px) solid transparent;

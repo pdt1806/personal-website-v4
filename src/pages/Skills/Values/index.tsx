@@ -47,7 +47,7 @@ export function Values() {
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}
-        color={theme.colors.blue[6]}
+        color={theme.colors['bn-blue'][6]}
       />
       <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
         {feature.title}

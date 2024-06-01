@@ -1,4 +1,4 @@
-import { Box, Container, Divider } from '@mantine/core';
+import { Box, Center, Container, Divider, Space } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { HeroHeader } from '../../components/HeroHeader';
 import Education from './Education';
@@ -11,7 +11,7 @@ export default function Home() {
 
   const mainContent = (
     <>
-      <Divider my="xl" />
+      <Space h="md" />
       <MoreAboutMe />
       <Divider my="xl" />
       <Education />
@@ -27,14 +27,11 @@ export default function Home() {
       {isMobile ? (
         <Container>{mainContent}</Container>
       ) : (
-        <Box
-          style={{
-            marginLeft: 'calc(var(--mantine-spacing-xl) * 5)',
-            marginRight: 'calc(var(--mantine-spacing-xl) * 5)',
-          }}
-        >
-          {mainContent}
-        </Box>
+        <Center>
+          <Box mx="xl" maw={1600}>
+            {mainContent}
+          </Box>
+        </Center>
       )}
     </>
   );
