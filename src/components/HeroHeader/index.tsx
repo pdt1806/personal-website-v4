@@ -6,9 +6,11 @@ import classes from './index.module.css';
 export function HeroHeader() {
   const postLoading = () => {
     document.getElementById('initLoading')?.style.setProperty('opacity', '0');
-    document.body.style.setProperty('overflow', 'auto');
-    document.getElementById('initLoading')?.remove();
-    AOS.refreshHard();
+    setTimeout(() => {
+      document.getElementById('initLoading')?.remove();
+      document.body.style.setProperty('overflow', 'auto');
+      AOS.refreshHard();
+    }, 500);
   };
 
   return (
