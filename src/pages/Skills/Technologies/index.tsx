@@ -10,13 +10,20 @@ const frontEndDevelopment: TechnologiesType[] = [
     name: 'React',
   },
   {
+    name: 'TypeScript',
+  },
+  {
     name: 'Vite',
   },
   {
     name: 'Mantine',
   },
+
   {
-    name: 'TypeScript',
+    name: 'Flutter',
+  },
+  {
+    name: 'Dart',
   },
 ];
 
@@ -114,8 +121,8 @@ export default function Technologies() {
               Technologies
             </Title>
             <Text className={classes.title} mb="lg" c="dimmed">
-              I enjoy using these technologies for building websites and apps, but there's more to
-              my skill set than just these.
+              I enjoy using these technologies to build websites and apps, but my skill set extends
+              beyond that.
             </Text>
             <Accordion chevronPosition="right" variant="separated">
               {[frontEndDevelopment, backEndDevelopment, webAndNet, design].map(

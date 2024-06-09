@@ -40,9 +40,10 @@ export default function Introduction() {
                 </Title>
                 <Text size="lg" mt="md" className={classes.text}>
                   Since I started working as a front-end developer in 2023, I've been creating
-                  personal projects and web apps of small businesses and startups, teaming up with
-                  talented people. Although I mainly focus on front-end work, I'm also interested in
-                  back-end development. I'm young and confident I'll achieve more in the future.
+                  projects across various platforms and developing web apps for small businesses and
+                  startups, collaborating with talented individuals. While my main focus is on
+                  front-end development, I also have a keen interest in back-end development. As a
+                  young developer, I'm confident that I'll achieve even more in the future.
                 </Text>
               </Box>
             </Flex>

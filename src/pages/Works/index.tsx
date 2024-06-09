@@ -26,6 +26,14 @@ const worksLayout = [
         source: 'https://github.com/pdt1806/autodisconnect',
         url: 'https://github.com/pdt1806/AutoDisconnect/releases/',
       },
+      {
+        title: 'DisLife',
+        description:
+          'Transform your Discord Rich Presence into a Locket-like experience: instantly share your moments with friends and peers!',
+        img: 'images/works/dislife.webp',
+        source: 'https://github.com/pdt1806/DisLife',
+        url: 'https://dislife.bennynguyen.dev',
+      },
     ],
   },
   {
@@ -82,9 +90,8 @@ export default function Works() {
             Works
           </Title>
           <Text c="white" className={classes.description} ta="center" mt="md" mb="">
-            Over time, I've put a lot of effort and passion into creating web apps and digital
-            experiences. It's been exciting to tackle challenges each time I design, build, or
-            revamp something.
+            Over time, I've poured a lot of effort and passion into creating web and mobile apps.
+            It's been exciting to tackle challenges every time I design, build, or revamp something.
           </Text>
         </div>
       </Box>
