@@ -26,7 +26,6 @@ type ContactFormValues = {
   email: string;
   fullName: string;
   message: string;
-  'g-recaptcha-response': string;
 };
 
 function ContactForm({
@@ -37,7 +36,7 @@ function ContactForm({
   setMessageSending,
   setMessageSent,
 }: {
-  onSubmit: () => void;
+  onSubmit: (token: string) => void;
   messageSent: boolean | null;
   messageSending: boolean;
   form: UseFormReturnType<ContactFormValues, (values: ContactFormValues) => ContactFormValues>;
@@ -54,8 +53,7 @@ function ContactForm({
     }
 
     const token = await executeRecaptcha('contact_form');
-    form.setFieldValue('g-recaptcha-response', token as string);
-    onSubmit();
+    onSubmit(token);
   };
 
   return (
@@ -138,7 +136,6 @@ export default function Contact() {
       email: '',
       fullName: '',
       message: '',
-      'g-recaptcha-response': '',
     },
     validate: {
       email: isEmail('Invalid email.'),
@@ -150,16 +147,16 @@ export default function Contact() {
   const [messageSending, setMessageSending] = useState(false);
   const [messageSent, setMessageSent] = useState<boolean | null>(null);
 
-  const handleSubmit = async () => {
-    setMessageSending(true);
-
+  const handleSubmit = async (token: string) => {
     try {
+      setMessageSending(true);
+      const payload = { ...form.values, 'g-recaptcha-response': token };
       const response = await fetch('https://webemail.bennynguyen.dev/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(form.values),
+        body: JSON.stringify(payload),
       });
       setMessageSending(false);
       setMessageSent(response.ok);
