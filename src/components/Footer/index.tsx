@@ -33,7 +33,7 @@ export default function Footer() {
               Contact
             </Text>
             <Text size="sm" c="dimmed">
-              Email: nmphuc1806@gmail.com
+              Email: me@bennynguyen.dev
             </Text>
             <Text size="sm" c="dimmed">
               Phone: +1 (279) 300-9785
