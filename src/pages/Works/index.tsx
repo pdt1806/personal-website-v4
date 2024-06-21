@@ -2,6 +2,7 @@
 
 import { Badge, Box, Center, Container, Text, Title } from '@mantine/core';
 import { WorksBox } from '../../components/WorksBox';
+import { WorkType } from '../../utils/types';
 import { Dots } from '../Home/Introduction/Dots';
 import classes from './index.module.css';
 
@@ -46,6 +47,7 @@ const worksLayout = [
         img: 'images/works/emochoice.webp',
         source: 'https://github.com/tobycm/emochoice',
         url: 'https://emochoice.ca/',
+        collaborators: ['tobycm'],
       },
     ],
   },
@@ -109,7 +111,7 @@ export default function Works() {
                   </Text>
                 </Box>
               )}
-              {section.works.map((work) => (
+              {section.works.map((work: WorkType) => (
                 <div
                   data-aos="flip-down"
                   data-aos-once
@@ -123,6 +125,7 @@ export default function Works() {
                     img={work.img}
                     source={work.source}
                     url={work.url}
+                    collaborators={work.collaborators}
                   />
                 </div>
               ))}
