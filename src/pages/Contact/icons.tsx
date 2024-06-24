@@ -24,7 +24,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
   );
 }
 
-const MOCKDATA = [
+const mapData = [
   { title: 'Email', description: 'me@bennynguyen.dev', icon: IconAt },
   { title: 'Phone', description: '+1 (279) 300-9785', icon: IconPhone },
   {
@@ -35,6 +35,6 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList() {
-  const items = MOCKDATA.map((item, index) => <ContactIcon key={index} {...item} />);
+  const items = mapData.map((item, index) => <ContactIcon key={index} {...item} />);
   return <Stack>{items}</Stack>;
 }

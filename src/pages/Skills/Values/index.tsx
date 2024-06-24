@@ -2,36 +2,30 @@ import { Card, Container, SimpleGrid, Text, Title, rem, useMantineTheme } from '
 import { IconBook, IconBrain, IconUsersGroup } from '@tabler/icons-react';
 import classes from './index.module.css';
 
-const mockdata = [
+const mapData = [
   {
-    title: 'Willing to Learn',
+    title: 'Continuous Learner',
     description:
       'Learning is a never-ending process. I am always willing to learn new things and improve my skills.',
     icon: IconBook,
   },
   {
-    title: 'Problem Solving',
+    title: 'Solution Finder',
     description:
       'Challenges are inevitable, and I am always ready to face them. Finding solutions to problems is one of my strengths.',
     icon: IconBrain,
   },
-  // {
-  //   title: 'Language Advantage',
-  //   description:
-  //     'Being fluent in English and Vietnamese is a big advantage for me to communicate with people from different countries. I also have some knowledge of Japanese and Spanish.',
-  //   icon: IconLanguage,
-  // },
   {
-    title: 'Teamwork Skills',
+    title: 'Cooperative Member',
     description:
-      'I have experience working in a team, and I know how to communicate and collaborate with other members to achieve the best results.',
+      'I have experience working in teams, and I know how to communicate and collaborate with other members to achieve the best results.',
     icon: IconUsersGroup,
   },
 ];
 
 export function Values() {
   const theme = useMantineTheme();
-  const features = mockdata.map((feature, index) => (
+  const features = mapData.map((feature, index) => (
     <Card
       key={feature.title}
       shadow="md"
