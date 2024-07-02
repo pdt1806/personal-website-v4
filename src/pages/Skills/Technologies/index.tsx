@@ -80,6 +80,10 @@ const design: TechnologiesType[] = [
   {
     name: 'Figma',
   },
+  {
+    name: 'Wondershare Filmora',
+    icon: 'filmora',
+  },
 ];
 
 const technologiesList = [
