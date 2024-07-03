@@ -58,7 +58,7 @@ export function HeroHeader() {
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Image
-            src="/images/me.png"
+            src="/images/me.webp"
             alt="Benny Nguyen"
             className={classes.image}
             // @ts-expect-error: intentional attribute
