@@ -1,8 +1,14 @@
 import { Box, Button, Container, Image, SimpleGrid, Text, Title } from '@mantine/core';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { postLoading } from '../../utils';
 import classes from './index.module.css';
 
 export function Error404() {
+  useEffect(() => {
+    postLoading();
+  }, []);
+
   return (
     <Container className={classes.root}>
       <SimpleGrid spacing={{ base: 40, sm: 80 }} cols={{ base: 1, sm: 2 }}>

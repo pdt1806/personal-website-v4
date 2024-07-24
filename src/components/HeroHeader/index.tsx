@@ -1,18 +1,9 @@
 import { Box, Grid, Group, Image, Text, Title, rem } from '@mantine/core';
-import AOS from 'aos';
+import { postLoading } from '../../utils';
 import SocialLinks from '../SocialLinks';
 import classes from './index.module.css';
 
 export function HeroHeader() {
-  const postLoading = () => {
-    document.getElementById('initLoading')?.style.setProperty('opacity', '0');
-    setTimeout(() => {
-      document.getElementById('initLoading')?.remove();
-      document.body.style.setProperty('overflow', 'auto');
-      AOS.refreshHard();
-    }, 500);
-  };
-
   return (
     <Box>
       <Grid>

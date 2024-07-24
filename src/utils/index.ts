@@ -4,6 +4,7 @@ import {
   IconBrandInstagram,
   IconBrandX,
 } from '@tabler/icons-react';
+import AOS from 'aos';
 
 export const socialLinks = [
   {
@@ -33,4 +34,13 @@ export const scrollToSection = (id: string) => {
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
+};
+
+export const postLoading = () => {
+  document.getElementById('initLoading')?.style.setProperty('opacity', '0');
+  setTimeout(() => {
+    document.getElementById('initLoading')?.remove();
+    document.body.style.setProperty('overflow', 'auto');
+    AOS.refreshHard();
+  }, 500);
 };
