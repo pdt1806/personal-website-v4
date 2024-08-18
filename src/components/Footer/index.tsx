@@ -44,7 +44,7 @@ export default function Footer() {
               Working Hours
             </Text>
             <Text size="sm" c="dimmed">
-              Weekdays: 4:00 PM - 9:00 PM
+              Weekdays: 2:00 PM - 6:00 PM
             </Text>
             <Text size="sm" c="dimmed">
               Weekends: 12:00 PM - 9:00 PM
