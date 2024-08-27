@@ -1,5 +1,7 @@
-import { Card, Text, Title } from '@mantine/core';
+import { Button, Card, Text, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { IconHeart } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 import classes from './index.module.css';
 
 export default function OtherAspectsCard({
@@ -41,6 +43,19 @@ export default function OtherAspectsCard({
           <Text size="lg" className={classes.title} fw={500}>
             {info.desc}
           </Text>
+          {index === 1 && (
+            <Button
+              leftSection={<IconHeart size={18} />}
+              size="lg"
+              color="#044eb3"
+              mt="sm"
+              component={Link}
+              to="https://app.schoolfundr.org/fund/antelopechoir/nmcDH"
+              target="_blank"
+            >
+              We are organizing a fundraiser!
+            </Button>
+          )}
         </div>
       </div>
     </Card>
