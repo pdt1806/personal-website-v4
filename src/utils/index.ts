@@ -2,6 +2,7 @@ import {
   IconBrandFacebook,
   IconBrandGithub,
   IconBrandInstagram,
+  IconBrandLinkedin,
   IconBrandX,
 } from '@tabler/icons-react';
 import AOS from 'aos';
@@ -11,6 +12,11 @@ export const socialLinks = [
     icon: IconBrandGithub,
     name: 'GitHub',
     to: 'https://github.com/pdt1806',
+  },
+  {
+    icon: IconBrandLinkedin,
+    name: 'LinkedIn',
+    to: 'https://linkedin.com/in/benny-nguyen-dev/',
   },
   {
     icon: IconBrandInstagram,
