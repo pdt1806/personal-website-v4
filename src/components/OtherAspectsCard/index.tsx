@@ -1,7 +1,5 @@
-import { Button, Card, Text, Title } from '@mantine/core';
+import { Card, Text, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { IconMusic } from '@tabler/icons-react';
-import { Link } from 'react-router-dom';
 import classes from './index.module.css';
 
 export default function OtherAspectsCard({
@@ -43,7 +41,7 @@ export default function OtherAspectsCard({
           <Text size="lg" className={classes.title} fw={500}>
             {info.desc}
           </Text>
-          {index === 1 && (
+          {/* {index === 1 && (
             <Button
               leftSection={<IconMusic size={18} />}
               size="lg"
@@ -55,7 +53,7 @@ export default function OtherAspectsCard({
             >
               Buy a ticket to the choir concert!
             </Button>
-          )}
+          )} */}
         </div>
       </div>
     </Card>
