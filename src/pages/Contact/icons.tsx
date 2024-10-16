@@ -1,5 +1,6 @@
 import { Box, Stack, Text, rem } from '@mantine/core';
 import { IconAt, IconPhone, IconSun } from '@tabler/icons-react';
+import { workingHours } from '../../utils';
 import classes from './icons.module.css';
 
 interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
@@ -29,7 +30,9 @@ const mapData = [
   { title: 'Phone', description: '+1 (279) 300-9785', icon: IconPhone },
   {
     title: 'Working hours',
-    description: [0, 6].includes(new Date().getDay()) ? '12:00 PM – 9:00 PM' : '4:00 PM – 9:00 PM',
+    description: [0, 6].includes(new Date().getDay())
+      ? workingHours.weekends
+      : workingHours.weekdays,
     icon: IconSun,
   },
 ];

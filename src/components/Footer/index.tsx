@@ -1,4 +1,5 @@
 import { Container, Group, Text, rem } from '@mantine/core';
+import { workingHours } from '../../utils';
 import SocialLinks from '../SocialLinks';
 import classes from './index.module.css';
 
@@ -44,10 +45,10 @@ export default function Footer() {
               Working Hours
             </Text>
             <Text size="sm" c="dimmed">
-              Weekdays: 2:00 PM - 6:00 PM
+              Weekdays: {workingHours.weekdays}
             </Text>
             <Text size="sm" c="dimmed">
-              Weekends: 12:00 PM - 9:00 PM
+              Weekends: {workingHours.weekends}
             </Text>
           </div>
         </div>
