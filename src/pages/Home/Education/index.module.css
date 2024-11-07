@@ -1,0 +1,12 @@
+.overlay {
+  opacity: 0;
+  transition: opacity 0.25s;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
