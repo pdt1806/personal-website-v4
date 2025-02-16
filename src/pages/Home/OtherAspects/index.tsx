@@ -4,11 +4,11 @@ import OtherAspectsCard from '../../../components/OtherAspectsCard';
 const info = [
   {
     title: 'Soccer',
-    desc: "I enjoy watching and playing soccer since the age of 10. With my passion, I have been a part of my 2 middle schools' soccer team for 2 years.",
+    desc: "I enjoy watching and playing soccer since the age of 10. With my passion, I was a part of my 2 middle schools' soccer team for 2 years.",
   },
   {
     title: 'Choir',
-    desc: "Singing has been a part of my life since I was young. I've been a member of my high school's choir for 2 years.",
+    desc: "Singing has been a part of my life since I was young. I've been a member of my high school's choir for 3 years.",
   },
   {
     title: 'Anime',

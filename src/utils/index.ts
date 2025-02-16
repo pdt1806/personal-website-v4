@@ -53,5 +53,5 @@ export const postLoading = () => {
 
 export const workingHours = {
   weekends: '12:00 PM – 9:00 PM',
-  weekdays: '2:00 PM – 6:00 PM',
+  weekdays: '4:00 PM – 8:00 PM',
 };

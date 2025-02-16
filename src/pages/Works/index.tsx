@@ -28,12 +28,12 @@ const worksLayout = [
         url: 'https://github.com/pdt1806/AutoDisconnect/releases/',
       },
       {
-        title: 'DisLife',
+        title: "benny's public library",
         description:
-          'Transform your Discord Rich Presence into a Locket-like experience: instantly share your moments with friends and peers!',
-        img: 'images/works/dislife.webp',
-        source: 'https://github.com/pdt1806/DisLife',
-        url: 'https://dislife.bennynguyen.dev',
+          'An HTTP file server that serves files from a directory, except I made it public so that I can share files with everyone over the Internet.',
+        img: 'images/works/public.webp',
+        source: 'https://github.com/pdt1806/public',
+        url: 'https://public.bennynguyen.dev/',
       },
     ],
   },
