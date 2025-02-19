@@ -36,9 +36,6 @@ export default function Footer() {
             <Text size="sm" c="dimmed">
               Email: me@bennynguyen.dev
             </Text>
-            <Text size="sm" c="dimmed">
-              Phone: +1 (279) 300-9785
-            </Text>
           </div>
           <div className={classes.wrapper}>
             <Text className={classes.title} mb="sm">

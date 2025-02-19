@@ -1,5 +1,5 @@
 import { Box, Stack, Text, rem } from '@mantine/core';
-import { IconAt, IconPhone, IconSun } from '@tabler/icons-react';
+import { IconAt, IconSun } from '@tabler/icons-react';
 import { workingHours } from '../../utils';
 import classes from './icons.module.css';
 
@@ -27,7 +27,6 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 
 const mapData = [
   { title: 'Email', description: 'me@bennynguyen.dev', icon: IconAt },
-  { title: 'Phone', description: '+1 (279) 300-9785', icon: IconPhone },
   {
     title: 'Working hours',
     description: [0, 6].includes(new Date().getDay())
