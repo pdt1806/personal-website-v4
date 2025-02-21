@@ -151,7 +151,7 @@ export default function Contact() {
     try {
       setMessageSending(true);
       const payload = { ...form.values, 'g-recaptcha-response': token };
-      const response = await fetch('https://webemail.bennynguyen.dev/', {
+      const response = await fetch('https://webemail.bennynguyen.dev/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
