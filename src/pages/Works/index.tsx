@@ -62,13 +62,13 @@ const worksLayout = [
         source: 'https://github.com/pdt1806/erg-wordle',
         url: 'https://wordle.bennynguyen.dev/',
       },
-      {
-        title: 'ERG Rock Paper Scissors',
-        description: 'A Rock Paper Scissors game created using Phaser, a JavaScript framework.',
-        img: 'images/works/rock-paper-scissors.webp',
-        source: 'https://github.com/pdt1806/erg-rock-paper-scissors',
-        url: 'https://ropas.bennynguyen.dev/',
-      },
+      // {
+      //   title: 'ERG Rock Paper Scissors',
+      //   description: 'A Rock Paper Scissors game created using Phaser, a JavaScript framework.',
+      //   img: 'images/works/rock-paper-scissors.webp',
+      //   source: 'https://github.com/pdt1806/erg-rock-paper-scissors',
+      //   url: 'https://ropas.bennynguyen.dev/',
+      // },
     ],
   },
 ];
