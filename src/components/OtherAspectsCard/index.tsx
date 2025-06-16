@@ -12,7 +12,7 @@ export default function OtherAspectsCard({
   const isMobile = useMediaQuery('(max-width: 48em)');
 
   return (
-    <Card p="xl" shadow="lg" className={classes.card} radius="md" mb="lg">
+    <Card p="xl" className={classes.card} radius="md" mb="lg">
       <div
         className={classes.image}
         style={{

@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <HeroHeader />
       <Introduction />
-      {/* <TypewriterAboutMe /> */}
       <Skills />
       <Works />
       <Contact />

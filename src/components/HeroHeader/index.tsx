@@ -1,4 +1,5 @@
 import { Box, Grid, Group, Image, Text, Title, rem } from '@mantine/core';
+
 import { postLoading } from '../../utils';
 import SocialLinks from '../SocialLinks';
 import classes from './index.module.css';

@@ -3,7 +3,6 @@ import {
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandLinkedin,
-  IconBrandX,
 } from '@tabler/icons-react';
 import AOS from 'aos';
 
@@ -28,11 +27,11 @@ export const socialLinks = [
     name: 'Facebook',
     to: 'https://facebook.com/pdteggman/',
   },
-  {
-    icon: IconBrandX,
-    name: 'X',
-    to: 'https://x.com/pdteggman/',
-  },
+  // {
+  //   icon: IconBrandX,
+  //   name: 'X',
+  //   to: 'https://x.com/pdteggman/',
+  // },
 ];
 
 export const scrollToSection = (id: string) => {

@@ -15,7 +15,7 @@ export default function MyBackground() {
     <Box mt="xl">
       <Center>
         <Title order={1} ta="center">
-          More about me
+          My background
         </Title>
       </Center>
       <Grid grow mt="xl">

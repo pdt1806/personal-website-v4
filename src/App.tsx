@@ -8,6 +8,7 @@ import './App.css';
 import Layout from './components/Layout';
 import { Error404 } from './pages/404';
 import Home from './pages/Home';
+import MoreAboutMe from './pages/MoreAboutMe';
 
 const routes: RouteObject[] = [
   {
@@ -17,6 +18,10 @@ const routes: RouteObject[] = [
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/more',
+        element: <MoreAboutMe />,
       },
       {
         path: '*',

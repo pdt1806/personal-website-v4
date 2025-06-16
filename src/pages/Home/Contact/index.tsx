@@ -167,7 +167,7 @@ export default function Contact() {
   };
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey="6LfIIKgpAAAAAHAr5zyz8L2q74HqOkdFTa4xPgJE">
+    <GoogleReCaptchaProvider reCaptchaKey="6LcaPGMrAAAAADZ3P5tQ8DE2VS8Dfom4voqZj4Ui">
       <Container id="contact">
         <Divider my="xl" />
         <Center mb="xl">

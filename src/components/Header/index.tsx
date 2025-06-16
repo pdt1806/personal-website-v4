@@ -38,15 +38,30 @@ export function Header() {
     </Button>
   );
 
+  const moreAboutMeButton = (
+    <Text
+      className={classes.link}
+      onClick={() => {
+        closeDrawer();
+        navigate('/more');
+      }}
+    >
+      More about me
+    </Text>
+  );
+
   return (
     <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Brand />
+          <Brand closeDrawer={closeDrawer} />
           <Group h="100%" gap={0} visibleFrom="md">
             {links}
           </Group>
-          <Group visibleFrom="md">{contactMeButton}</Group>
+          <Group visibleFrom="md" gap="xs" h="100%">
+            {moreAboutMeButton}
+            {contactMeButton}
+          </Group>
           <Burger
             opened={drawerOpened}
             onClick={toggleDrawer}
@@ -68,16 +83,16 @@ export function Header() {
         <Drawer.Content>
           <Drawer.Header>
             <Drawer.Title>
-              <Brand />
+              <Brand closeDrawer={closeDrawer} />
             </Drawer.Title>
             <Drawer.CloseButton />
           </Drawer.Header>
           <Drawer.Body>
             <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
               {links}
+              {moreAboutMeButton}
 
               <Divider my="sm" />
-
               <Group justify="center" grow pb="xl" px="md">
                 {contactMeButton}
               </Group>
