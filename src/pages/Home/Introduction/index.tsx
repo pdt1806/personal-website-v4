@@ -24,7 +24,7 @@ export default function Introduction() {
                 alt="my-avatar"
                 data-aos="flip-right"
                 data-aos-once
-                data-aos-offset="300"
+                data-aos-offset="350"
                 data-aos-duration="1000"
               />
               <Box

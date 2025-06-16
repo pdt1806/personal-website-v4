@@ -20,7 +20,7 @@ export function Error404() {
             ml="auto"
             mr="auto"
           />
-          <Link
+          {/* <Link
             to="https://freepik.com"
             style={{
               color: 'var(--mantine-color-dimmed)',
@@ -29,7 +29,7 @@ export function Error404() {
             <Text size="sm" ta="center" mt="lg">
               Designed by storyset / Freepik
             </Text>
-          </Link>
+          </Link> */}
         </Box>
         <Box className={classes.content}>
           <Title className={classes.title}>Something is not right...</Title>
@@ -50,7 +50,7 @@ export function Error404() {
         </Box>
         <Box className={classes.desktopImage}>
           <Image src="/images/components/404.svg" />
-          <Link
+          {/* <Link
             to="https://freepik.com"
             style={{
               color: 'var(--mantine-color-dimmed)',
@@ -59,7 +59,7 @@ export function Error404() {
             <Text size="sm" ta="center" mt="lg">
               Designed by storyset / Freepik
             </Text>
-          </Link>
+          </Link> */}
         </Box>
       </SimpleGrid>
     </Container>

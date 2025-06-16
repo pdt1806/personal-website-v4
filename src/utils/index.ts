@@ -51,7 +51,13 @@ export const postLoading = () => {
   }, 500);
 };
 
-export const workingHours = {
-  weekends: '12:00 PM – 9:00 PM',
-  weekdays: '4:00 PM – 8:00 PM',
+export const getUTCOffset = (timeZone: string) => {
+  const now = new Date();
+  const tzDate = new Intl.DateTimeFormat('en-US', {
+    timeZone,
+    timeZoneName: 'shortOffset',
+  }).formatToParts(now);
+
+  const offset = tzDate.find((part) => part.type === 'timeZoneName')?.value;
+  return offset || 'UTC';
 };

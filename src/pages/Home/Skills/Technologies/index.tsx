@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Accordion, Container, Grid, Group, Image, Text, Title, Tooltip } from '@mantine/core';
+import { Box, Container, Flex, Grid, Image, Stack, Text, Title, Tooltip } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { Link } from 'react-router-dom';
-import { TechnologiesType } from '../../../utils/types';
+import { TechnologiesType } from '../../../../utils/types';
 import classes from './index.module.css';
 
 const frontEndDevelopment: TechnologiesType[] = [
@@ -99,17 +98,23 @@ export default function Technologies() {
   return (
     <div className={classes.wrapper}>
       <Container size="lg">
-        <Grid gutter={50}>
-          <Grid.Col span={{ base: 12, md: 6 }}>
+        <Grid gutter={75}>
+          <Grid.Col
+            span={{ base: 12, md: 6 }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
             <Image
               src="images/components/technologies.svg"
               alt="Technologies"
               maw={512}
-              mr="auto"
-              ml="auto"
+              mx="auto"
               id="technologies-image"
             />
-            <Link
+            {/* <Link
               to="https://freepik.com"
               style={{
                 color: 'var(--mantine-color-dimmed)',
@@ -118,7 +123,7 @@ export default function Technologies() {
               <Text size="sm" ta="center" mt="lg">
                 Designed by pikisuperstar / Freepik
               </Text>
-            </Link>
+            </Link> */}
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Title order={1} className={classes.title} mb="sm">
@@ -128,14 +133,13 @@ export default function Technologies() {
               I enjoy using these technologies to build websites and apps, but my skill set extends
               beyond that.
             </Text>
-            <Accordion chevronPosition="right" variant="separated">
+            <Stack gap="md">
               {[frontEndDevelopment, backEndDevelopment, webAndNet, design].map(
                 (section, index) => (
-                  <Accordion.Item
+                  <Box
                     className={classes.item}
-                    value={technologiesList[index]}
                     key={technologiesList[index]}
-                    id={`technologies-accordion-${index}`}
+                    id={`technologies-box-${index}`}
                     data-aos="fade-down"
                     data-aos-once
                     data-aos-anchor={isMobile ? null : '#technologies-image'}
@@ -144,25 +148,25 @@ export default function Technologies() {
                     data-aos-duration="1000"
                     data-aos-offset={isMobile ? 100 : 0}
                   >
-                    <Accordion.Control>{technologiesList[index]}</Accordion.Control>
-                    <Accordion.Panel>
-                      <Group>
-                        {section.map((technology) => (
-                          <Tooltip key={technology.name} label={technology.name}>
-                            <Image
-                              src={`icons/tech/${technology.icon ?? technology.name.toLowerCase()}.svg`}
-                              alt={technology.name}
-                              height={28}
-                              width={28}
-                            />
-                          </Tooltip>
-                        ))}
-                      </Group>
-                    </Accordion.Panel>
-                  </Accordion.Item>
+                    <Text key={technologiesList[index]} mb="sm">
+                      {technologiesList[index]}
+                    </Text>
+                    <Flex gap="sm">
+                      {section.map((technology) => (
+                        <Tooltip key={technology.name} label={technology.name}>
+                          <Image
+                            src={`icons/tech/${technology.icon ?? technology.name.toLowerCase()}.svg`}
+                            alt={technology.name}
+                            height={28}
+                            width={28}
+                          />
+                        </Tooltip>
+                      ))}
+                    </Flex>
+                  </Box>
                 )
               )}
-            </Accordion>
+            </Stack>
           </Grid.Col>
         </Grid>
       </Container>

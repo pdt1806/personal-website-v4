@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { Badge, Box, Center, Container, Text, Title } from '@mantine/core';
-import { WorksBox } from '../../components/WorksBox';
-import { WorkType } from '../../utils/types';
-import { Dots } from '../Home/Introduction/Dots';
+import { WorksBox } from '../../../components/WorksBox';
+import { WorkType } from '../../../utils/types';
+import { Dots } from '../Introduction/Dots';
 import classes from './index.module.css';
 
 const worksLayout = [

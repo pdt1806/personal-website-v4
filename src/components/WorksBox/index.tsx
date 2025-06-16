@@ -35,20 +35,20 @@ export function WorksBox({
         </Title>
         <Text size="md" className={classes.description}>
           {description}
-          {collaborators && (
-            <Text component="p">
-              In collaboration with{' '}
-              {collaborators.map((collaborator, index) => (
-                <span key={index}>
-                  <Link to={`https://github.com/${collaborator}`} style={{ color: 'white' }}>
-                    @{collaborator}
-                  </Link>
-                  {index !== collaborators.length - 1 && ', '}
-                </span>
-              ))}
-            </Text>
-          )}
         </Text>
+        {collaborators && (
+          <Text size="md" c="white">
+            In collaboration with{' '}
+            {collaborators.map((collaborator, index) => (
+              <span key={index}>
+                <Link to={`https://github.com/${collaborator}`} style={{ color: 'white' }}>
+                  @{collaborator}
+                </Link>
+                {index !== collaborators.length - 1 && ', '}
+              </span>
+            ))}
+          </Text>
+        )}
         <Group className={classes.action}>
           <Button c="white" color="black" size="xs" component={Link} to={source}>
             Source code

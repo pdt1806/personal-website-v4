@@ -1,6 +1,6 @@
 import { Box, Center, Grid, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import MoreAboutMeCard from '../../../components/MoreAboutMeCard';
+import MyBackgroundCard from '../../../components/MyBackgroundCard';
 
 const desc = [
   'Was born and raised in Vietnam until the age of 14, I’ve overcome numerous obstacles to become who I am today.',
@@ -8,7 +8,7 @@ const desc = [
   'Driven by a deep passion, I aspire to create computer innovations that touch lives, making a positive impact on the world around us.',
 ];
 
-export default function MoreAboutMe() {
+export default function MyBackground() {
   const isMobile = useMediaQuery('(max-width: 75em)');
 
   return (
@@ -21,7 +21,7 @@ export default function MoreAboutMe() {
       <Grid grow mt="xl">
         {desc.map((_, index) => (
           <Grid.Col span={isMobile ? 12 : 3} key={index}>
-            <MoreAboutMeCard index={index} desc={desc[index]} />
+            <MyBackgroundCard index={index} desc={desc[index]} />
           </Grid.Col>
         ))}
       </Grid>

@@ -7,7 +7,7 @@ import { createBrowserRouter, RouteObject, RouterProvider } from 'react-router-d
 import './App.css';
 import Layout from './components/Layout';
 import { Error404 } from './pages/404';
-import All from './pages/All';
+import Home from './pages/Home';
 
 const routes: RouteObject[] = [
   {
@@ -16,7 +16,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <All />,
+        element: <Home />,
       },
       {
         path: '*',

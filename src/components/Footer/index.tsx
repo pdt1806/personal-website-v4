@@ -1,9 +1,30 @@
 import { Container, Group, Text, rem } from '@mantine/core';
-import { workingHours } from '../../utils';
+import { useEffect, useState } from 'react';
+import { getUTCOffset } from '../../utils';
 import SocialLinks from '../SocialLinks';
 import classes from './index.module.css';
 
 export default function Footer() {
+  const [time, setTime] = useState<string>('');
+
+  useEffect(() => {
+    const update = () => {
+      const now = new Date().toLocaleString('en-US', {
+        timeZone: 'America/Los_Angeles',
+        hour: 'numeric',
+        minute: '2-digit',
+        // second: '2-digit',
+        hour12: true,
+      });
+      setTime(now);
+    };
+
+    update();
+    const interval = setInterval(update, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
@@ -36,16 +57,16 @@ export default function Footer() {
             <Text size="sm" c="dimmed">
               Email: me@bennynguyen.dev
             </Text>
+            <Text size="sm" c="dimmed">
+              Based in: Antelope, California
+            </Text>
           </div>
           <div className={classes.wrapper}>
             <Text className={classes.title} mb="sm">
-              Working Hours
+              Local time
             </Text>
             <Text size="sm" c="dimmed">
-              Weekdays: {workingHours.weekdays}
-            </Text>
-            <Text size="sm" c="dimmed">
-              Weekends: {workingHours.weekends}
+              {time} ({getUTCOffset('America/Los_Angeles')})
             </Text>
           </div>
         </div>

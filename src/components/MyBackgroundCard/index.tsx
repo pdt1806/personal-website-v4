@@ -1,7 +1,7 @@
 import { Card, Text } from '@mantine/core';
 import classes from './index.module.css';
 
-export default function MoreAboutMeCard({ desc, index }: { desc: string; index: number }) {
+export default function MyBackgroundCard({ desc, index }: { desc: string; index: number }) {
   return (
     <Card p="lg" shadow="lg" className={classes.card} radius="md">
       <div
