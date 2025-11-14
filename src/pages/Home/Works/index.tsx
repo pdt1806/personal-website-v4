@@ -27,13 +27,20 @@ const worksLayout = [
         source: 'https://github.com/pdt1806/autodisconnect',
         url: 'https://github.com/pdt1806/AutoDisconnect/releases/',
       },
+      // {
+      //   title: "benny's public library",
+      //   description:
+      //     'An HTTP file server that serves files from a directory, except I made it public so that I can share files with everyone over the Internet.',
+      //   img: 'images/works/public.webp',
+      //   source: 'https://github.com/pdt1806/public',
+      //   url: 'https://public.bennynguyen.dev/',
+      // },
       {
-        title: "benny's public library",
-        description:
-          'An HTTP file server that serves files from a directory, except I made it public so that I can share files with everyone over the Internet.',
-        img: 'images/works/public.webp',
-        source: 'https://github.com/pdt1806/public',
-        url: 'https://public.bennynguyen.dev/',
+        title: 'College Bank Clicker',
+        description: 'A parody clicker game about the College Board AP exams.',
+        img: 'images/works/college-bank-clicker.webp',
+        source: 'https://github.com/pdt1806/college-bank-clicker',
+        url: 'https://collegebank.click',
       },
     ],
   },
