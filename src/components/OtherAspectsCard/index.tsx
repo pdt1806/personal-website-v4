@@ -25,7 +25,7 @@ export default function OtherAspectsCard({
       <div
         className={classes.overlay}
         style={{
-          backgroundImage: `linear-gradient(${isMobile ? '180' : index % 2 === 0 ? '270' : '90'}deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, ${isMobile ? '0.6' : '0.45'}) 40%, rgba(0, 0, 0, 0.85) 100%)`,
+          backgroundImage: `linear-gradient(${isMobile ? '180' : index % 2 === 0 ? '270' : '90'}deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, ${isMobile ? '0.6' : '0.45'}) 40%, rgba(0, 0, 0, 0.65) 100%)`,
         }}
       />
       <div
