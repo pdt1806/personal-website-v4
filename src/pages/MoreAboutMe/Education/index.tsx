@@ -21,7 +21,7 @@ const TERTIARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} - ${SECONDARY_COL_HEIGHT
 const data = [
   {
     name: 'Antelope High School',
-    date: 'Nov 2022 - expected Jun 2026',
+    date: 'Nov 2022 - May 2026',
     logo: 'images/components/antelope-high-school-logo.webp',
     image: 'images/components/antelope-high-school.webp',
   },

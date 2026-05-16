@@ -59,8 +59,8 @@ const worksLayout = [
     ],
   },
   {
-    title: 'Egg Recreates Games',
-    description: 'Some of the games that I have recreated using HTML5, CSS and JavaScript.',
+    title: 'Egg Remakes Games',
+    description: 'Some of the games that I have remade using HTML5, CSS and JavaScript.',
     works: [
       {
         title: 'ERG Wordle',

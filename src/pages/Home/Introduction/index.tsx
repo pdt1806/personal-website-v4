@@ -18,7 +18,7 @@ export default function Introduction() {
           <Center>
             <Flex direction={isMobile ? 'column' : 'row'} align="center">
               <Avatar
-                src="/images/2022-me.webp"
+                src="/images/2025-me.webp"
                 size={300}
                 mb={isMobile ? 'xl' : '0'}
                 alt="my-avatar"
