@@ -1,9 +1,4 @@
-import {
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-} from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
 import AOS from 'aos';
 
 export const socialLinks = [
@@ -22,11 +17,11 @@ export const socialLinks = [
     name: 'Instagram',
     to: 'https://instagram.com/benny_ng08/',
   },
-  {
-    icon: IconBrandFacebook,
-    name: 'Facebook',
-    to: 'https://facebook.com/pdteggman/',
-  },
+  // {
+  //   icon: IconBrandFacebook,
+  //   name: 'Facebook',
+  //   to: 'https://facebook.com/pdteggman/',
+  // },
   // {
   //   icon: IconBrandX,
   //   name: 'X',

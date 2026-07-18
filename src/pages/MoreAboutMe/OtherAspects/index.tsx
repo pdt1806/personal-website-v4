@@ -8,7 +8,7 @@ const info = [
   },
   {
     title: 'Choir',
-    desc: "Singing has been a part of my life since I was young. I've been a member of my high school's choir for 3 years.",
+    desc: "Singing has been a part of my life since I was young. I was a member of my high school's choir for 4 years.",
   },
   {
     title: 'Anime',

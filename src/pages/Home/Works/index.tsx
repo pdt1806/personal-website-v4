@@ -92,7 +92,7 @@ export default function Works() {
         <div className={classes.inner}>
           <Center>
             <Badge color="white" c="bn-blue">
-              Pride Hall
+              Turning Ideas into Reality
             </Badge>
           </Center>
           <Title order={1} ta="center" mt="sm" c="white">

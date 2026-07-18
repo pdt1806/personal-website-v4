@@ -7,6 +7,7 @@ import {
   Image,
   Overlay,
   SimpleGrid,
+  Stack,
   Text,
   Title,
   rem,
@@ -19,6 +20,12 @@ const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 1.2 - var(--mantine-s
 const TERTIARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} - ${SECONDARY_COL_HEIGHT} - var(--mantine-spacing-md))`;
 
 const data = [
+  {
+    name: 'University of California, Davis',
+    date: 'Sep 2026 - expected June 2030',
+    logo: 'images/components/uc-davis-logo.webp',
+    image: 'images/components/uc-davis.webp',
+  },
   {
     name: 'Antelope High School',
     date: 'Nov 2022 - May 2026',
@@ -72,41 +79,47 @@ export default function Education() {
       <Center>
         <Title order={1}>Education</Title>
       </Center>
-      <Box
+      <Stack
         style={{
           marginTop: 'calc(var(--mantine-spacing-lg) * 2)',
           marginBottom: 'calc(var(--mantine-spacing-lg) * 2)',
         }}
       >
+        <Box
+          h={!isMobile ? PRIMARY_COL_HEIGHT : SECONDARY_COL_HEIGHT}
+          style={{ position: 'relative' }}
+        >
+          {schoolComponents[0]}
+        </Box>
         <SimpleGrid cols={{ base: 1, xl: 2 }} spacing="md">
           <Box
             h={!isMobile ? PRIMARY_COL_HEIGHT : SECONDARY_COL_HEIGHT}
             style={{ position: 'relative' }}
           >
-            {schoolComponents[0]}
+            {schoolComponents[1]}
           </Box>
           <Grid gutter="md">
             <Grid.Col>
               <Flex h={TERTIARY_COL_HEIGHT} direction="column" align="center" justify="center">
                 <Title order={2}>Schools in Vietnam</Title>
                 <Text size="sm" c="dimmed" ta="center">
-                  Where I grew and learned the most during my early years.
+                  Where I grew up and learned the most during my early years.
                 </Text>
               </Flex>
-            </Grid.Col>
-            <Grid.Col span={isMobile ? 12 : 6}>
-              <Box h={SECONDARY_COL_HEIGHT} style={{ position: 'relative' }}>
-                {schoolComponents[1]}
-              </Box>
             </Grid.Col>
             <Grid.Col span={isMobile ? 12 : 6}>
               <Box h={SECONDARY_COL_HEIGHT} style={{ position: 'relative' }}>
                 {schoolComponents[2]}
               </Box>
             </Grid.Col>
+            <Grid.Col span={isMobile ? 12 : 6}>
+              <Box h={SECONDARY_COL_HEIGHT} style={{ position: 'relative' }}>
+                {schoolComponents[3]}
+              </Box>
+            </Grid.Col>
           </Grid>
         </SimpleGrid>
-      </Box>
+      </Stack>
     </Box>
   );
 }
